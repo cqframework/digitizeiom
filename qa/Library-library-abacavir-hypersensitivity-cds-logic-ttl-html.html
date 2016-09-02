@@ -1,0 +1,64 @@
+﻿<html>
+<head>
+  <title>Library-library-abacavir-hypersensitivity-cds-logic-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;Library/library-abacavir-hypersensitivity-cds-logic&gt; a fhir:Library;
+  <a href="http://hl7-fhir.github.io/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7-fhir.github.io/library.html#Library.id">fhir:Resource.id</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#id">fhir:value</a> &quot;library-abacavir-hypersensitivity-cds-logic&quot;];
+  <a href="http://hl7-fhir.github.io/library.html#Library.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Abacavir Hypersensitivity CDS Logic&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7-fhir.github.io/library.html#Library.identifier">fhir:Library.identifier</a> [
+     <a href="http://hl7-fhir.github.io/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7-fhir.github.io/datatypes.html#Identifier#Identifier.use">fhir:Identifier.use</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#code">fhir:value</a> &quot;official&quot; ];
+     <a href="http://hl7-fhir.github.io/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#string">fhir:value</a> &quot;Abacavir_Hypersensitivity_CDS_Logic&quot; ]
+  ];
+  <a href="http://hl7-fhir.github.io/library.html#Library.version">fhir:Library.version</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#string">fhir:value</a> &quot;1.0.0&quot;];
+  <a href="http://hl7-fhir.github.io/library.html#Library.title">fhir:Library.title</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#string">fhir:value</a> &quot;Abacavir Hypersensitivity CDS Logic&quot;];
+  <a href="http://hl7-fhir.github.io/library.html#Library.type">fhir:Library.type</a> [
+     <a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7-fhir.github.io/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#code">fhir:value</a> &quot;logic-library&quot; ]     ]
+  ];
+  <a href="http://hl7-fhir.github.io/library.html#Library.status">fhir:Library.status</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#code">fhir:value</a> &quot;active&quot;];
+  <a href="http://hl7-fhir.github.io/library.html#Library.experimental">fhir:Library.experimental</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean];
+  <a href="http://hl7-fhir.github.io/library.html#Library.description">fhir:Library.description</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#string">fhir:value</a> &quot;Decision support logic for improving detection of hypersensitivity to Abacavir caused by the HLA-B*57:01 allele&quot;];
+  <a href="http://hl7-fhir.github.io/library.html#Library.publicationDate">fhir:Library.publicationDate</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#date">fhir:value</a> &quot;2016-03-14&quot;^^xsd:date];
+  <a href="http://hl7-fhir.github.io/library.html#Library.topic">fhir:Library.topic</a> [
+     <a href="http://hl7-fhir.github.io/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#string">fhir:value</a> &quot;Abacavir Hypersensitivity&quot; ]
+  ];
+  <a href="http://hl7-fhir.github.io/library.html#Library.relatedResource">fhir:Library.relatedResource</a> [
+     <a href="http://hl7-fhir.github.io/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7-fhir.github.io/datatypes.html#RelatedResource#RelatedResource.type">fhir:RelatedResource.type</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#code">fhir:value</a> &quot;depends-on&quot; ];
+     <a href="http://hl7-fhir.github.io/datatypes.html#RelatedResource#RelatedResource.resource">fhir:RelatedResource.resource</a> [
+       <a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#string">fhir:value</a> &quot;Library/library-quick-model-definition&quot; ]     ]
+  ];
+  <a href="http://hl7-fhir.github.io/library.html#Library.dataRequirement">fhir:Library.dataRequirement</a> [
+     <a href="http://hl7-fhir.github.io/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.type">fhir:DataRequirement.type</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#code">fhir:value</a> &quot;Observation&quot; ];
+     <a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter">fhir:DataRequirement.codeFilter</a> [
+       <a href="http://hl7-fhir.github.io/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter.path">fhir:DataRequirement.codeFilter.path</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#string">fhir:value</a> &quot;code&quot; ];
+       <a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter.valueSet[x]">fhir:DataRequirement.codeFilter.valueSetString</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#string">fhir:value</a> &quot;Observed HLA-B*57:01 Allele&quot; ]     ]
+  ];
+  <a href="http://hl7-fhir.github.io/library.html#Library.content">fhir:Library.content</a> [
+     <a href="http://hl7-fhir.github.io/datatypes.html#Attachment#Attachment.contentType">fhir:Attachment.contentType</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#code">fhir:value</a> &quot;text/cql&quot; ];
+     <a href="http://hl7-fhir.github.io/datatypes.html#Attachment#Attachment.url">fhir:Attachment.url</a> [ <a href="http://hl7-fhir.github.io/datatypes.html#uri">fhir:value</a> &quot;http://cqlrepository.org/AbacavirOrderingPharmacogenomicSupport.cql&quot; ]
+  ].
+
+</pre>
+
+</body>
+</html>

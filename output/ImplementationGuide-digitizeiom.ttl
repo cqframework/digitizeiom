@@ -1,0 +1,130 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+[a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:ImplementationGuide.url [ fhir:value "http://hl7.org/fhir/digitizeiom"];
+  fhir:ImplementationGuide.version [ fhir:value "1"];
+  fhir:ImplementationGuide.name [ fhir:value "DIGITizE Pharmacogenomic Ordering Support IOM"];
+  fhir:ImplementationGuide.status [ fhir:value "draft"];
+  fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:ImplementationGuide.publisher [ fhir:value "Hl7 CDS"];
+  fhir:ImplementationGuide.date [ fhir:value "2016-03-20T23:16:43-06:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.description [ fhir:value "Establishing Connectivity and Pharmacogenomic Clinical Decision Support Rules to Protect Patients Carrying HLA-B*57:01 and TPMT Variants"];
+  fhir:ImplementationGuide.fhirVersion [ fhir:value "1.0.1"];
+  fhir:ImplementationGuide.package [
+     fhir:index 0;
+     fhir:ImplementationGuide.package.name [ fhir:value "Abacavir and Azathioprine Sensitivity" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Library-library-abacavir-hypersensitivity-cds-logic.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Library - Abacavir Ordering" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Logic to determine the whether or not an order of Abacavir is appropriate for a patient and alert the user if it is not." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <?3?/Library/library-abacavir-hypersensitivity-cds-logic>;
+         fhir:Reference.reference [ fhir:value "Library/library-abacavir-hypersensitivity-cds-logic" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Library-library-azathioprine-myelotoxicity-cds-logic.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Library - Azathioprine Ordering" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Logic to determine the whether or not the dosage of Azathioprine is appropriate for a patient and alert the user if it is not." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <?3?/Library/library-azathioprine-myelotoxicity-cds-logic>;
+         fhir:Reference.reference [ fhir:value "Library/library-azathioprine-myelotoxicity-cds-logic" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Decision Support Rule - Abacavir Conflicting Statuses" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Decision support rule to detect and report conflicting Abacavir Sensitivity tests." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <?3?/PlanDefinition/plandefinition-abacavir-conflicting-statuses>;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/plandefinition-abacavir-conflicting-statuses" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Decision Support Rule - Abacavir Hypersensitivity" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Decision support rule to detect and report Abacavir Hypersensitivity." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <?3?/PlanDefinition/plandefinition-abacavir-hypersensitivity-positive>;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/plandefinition-abacavir-hypersensitivity-positive" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Decision Support Rule - Abacavir Test Required" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Decision support rule to detect and report the need for an Abacavir Sensitivity test." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <?3?/PlanDefinition/plandefinition-abacavir-need-test>;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/plandefinition-abacavir-need-test" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Decision Support Rule - Azathioprine Conflicting Statuses" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Decision support rule to detect and report conflicting Azathioprine Myelotoxicity tests." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <?3?/PlanDefinition/plandefinition-azathioprine-conflicting-statuses>;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/plandefinition-azathioprine-conflicting-statuses" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Decision Support Rule - Azathioprine Lower Dosage" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Decision support rule to detect and report Azathioprine dosage level guidance." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <?3?/PlanDefinition/plandefinition-azathioprine-lower-dosage>;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/plandefinition-azathioprine-lower-dosage" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Decision Support Rule - Azathioprine Test Required" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Decision support rule to detect and report the need for an Azathioprine Myelotoxicity test." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <?3?/PlanDefinition/plandefinition-azathioprine-need-test>;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/plandefinition-azathioprine-need-test" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Decision Support Rule - Azathioprine Poor Status" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Decision support rule to detect and report Azathioprine Myelotoxicity poor status guidance." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <?3?/PlanDefinition/plandefinition-azathioprine-poor-status>;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/plandefinition-azathioprine-poor-status" ]
+       ]
+     ]
+  ];
+  fhir:ImplementationGuide.binary [
+     fhir:value "AbacavirOrderingPharmacogenomicSupport.cql";
+     fhir:index 0
+  ], [
+     fhir:value "AzathioprineOrderingPharmacogenomicSupport.cql";
+     fhir:index 1
+  ];
+  fhir:ImplementationGuide.page [
+     fhir:ImplementationGuide.page.source [ fhir:value "index.html" ];
+     fhir:ImplementationGuide.page.title [ fhir:value "Pharmacogenomic Ordering Support" ];
+     fhir:ImplementationGuide.page.kind [ fhir:value "page" ];
+     fhir:ImplementationGuide.page.format [ fhir:value "html" ]
+  ]].
+
+# -------------------------------------------------------------------------------------
+

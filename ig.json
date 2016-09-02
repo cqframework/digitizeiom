@@ -1,0 +1,33 @@
+{
+	"tool": "jekyll",
+	"paths": {
+		"resources": "resources",
+		"pages": "pages",
+		"temp": "temp",
+		"output": "output",
+		"qa": "qa",
+		"specification": "http://hl7-fhir.github.io/"
+	},
+  	"defaults": {
+		"Any": {
+			"template-format": "instance-template-format.html",
+			"template-base": "instance-template-base.html"
+		},
+		"StructureDefinition" : {
+				"template-base": "instance-template-sd.html"
+		}
+	},
+	"canonicalBase": "http://hl7.org/fhir/digitizeiom",
+	"source": "digitizeiom.xml",
+	"resources": {
+		"Library/abacavir-hypersensitivity-cds-logic": { "source": "library-abacavir-hypersensitivity-cds-logic" },
+		"Library/azathioprine-myelotoxicity-cds-logic": { "source": "library-azathioprine-myelotoxicity-cds-logic" },
+		"PlanDefinition/abacavir-conflicting-statuses": { "source": "plandefinition-abacavir-conflicting-statuses" },
+		"PlanDefinition/abacavir-hypersensitivity-positive": { "source": "plandefinition-abacavir-hypersensitivity-positive" },
+		"PlanDefinition/abacavir-need-test": { "source": "plandefinition-abacavir-need-test" },
+		"PlanDefinition/azathioprine-conflicting-statuses": { "source": "plandefinition-azathioprine-conflicting-statuses" },
+		"PlanDefinition/azathioprine-lower-dosage": { "source": "plandefinition-azathioprine-lower-dosage" },
+		"PlanDefinition/azathioprine-need-test": { "source": "plandefinition-azathioprine-need-test" },
+		"PlanDefinition/azathioprine-poor-status": { "source": "plandefinition-azathioprine-poor-status" }
+	}
+}

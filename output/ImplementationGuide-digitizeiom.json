@@ -1,0 +1,113 @@
+{
+  "resourceType": "ImplementationGuide",
+  "url": "http://hl7.org/fhir/digitizeiom",
+  "version": "1",
+  "name": "DIGITizE Pharmacogenomic Ordering Support IOM",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Hl7 CDS",
+  "date": "2016-03-20T23:16:43-06:00",
+  "description": "Establishing Connectivity and Pharmacogenomic Clinical Decision Support Rules to Protect Patients Carrying HLA-B*57:01 and TPMT Variants",
+  "fhirVersion": "1.0.1",
+  "package": [
+    {
+      "name": "Abacavir and Azathioprine Sensitivity",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Library-library-abacavir-hypersensitivity-cds-logic.html"
+            }
+          ],
+          "example": true,
+          "name": "Library - Abacavir Ordering",
+          "description": "Logic to determine the whether or not an order of Abacavir is appropriate for a patient and alert the user if it is not.",
+          "sourceReference": {
+            "reference": "Library/library-abacavir-hypersensitivity-cds-logic"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Library-library-azathioprine-myelotoxicity-cds-logic.html"
+            }
+          ],
+          "example": true,
+          "name": "Library - Azathioprine Ordering",
+          "description": "Logic to determine the whether or not the dosage of Azathioprine is appropriate for a patient and alert the user if it is not.",
+          "sourceReference": {
+            "reference": "Library/library-azathioprine-myelotoxicity-cds-logic"
+          }
+        },
+        {
+          "example": true,
+          "name": "Decision Support Rule - Abacavir Conflicting Statuses",
+          "description": "Decision support rule to detect and report conflicting Abacavir Sensitivity tests.",
+          "sourceReference": {
+            "reference": "PlanDefinition/plandefinition-abacavir-conflicting-statuses"
+          }
+        },
+        {
+          "example": true,
+          "name": "Decision Support Rule - Abacavir Hypersensitivity",
+          "description": "Decision support rule to detect and report Abacavir Hypersensitivity.",
+          "sourceReference": {
+            "reference": "PlanDefinition/plandefinition-abacavir-hypersensitivity-positive"
+          }
+        },
+        {
+          "example": true,
+          "name": "Decision Support Rule - Abacavir Test Required",
+          "description": "Decision support rule to detect and report the need for an Abacavir Sensitivity test.",
+          "sourceReference": {
+            "reference": "PlanDefinition/plandefinition-abacavir-need-test"
+          }
+        },
+        {
+          "example": true,
+          "name": "Decision Support Rule - Azathioprine Conflicting Statuses",
+          "description": "Decision support rule to detect and report conflicting Azathioprine Myelotoxicity tests.",
+          "sourceReference": {
+            "reference": "PlanDefinition/plandefinition-azathioprine-conflicting-statuses"
+          }
+        },
+        {
+          "example": true,
+          "name": "Decision Support Rule - Azathioprine Lower Dosage",
+          "description": "Decision support rule to detect and report Azathioprine dosage level guidance.",
+          "sourceReference": {
+            "reference": "PlanDefinition/plandefinition-azathioprine-lower-dosage"
+          }
+        },
+        {
+          "example": true,
+          "name": "Decision Support Rule - Azathioprine Test Required",
+          "description": "Decision support rule to detect and report the need for an Azathioprine Myelotoxicity test.",
+          "sourceReference": {
+            "reference": "PlanDefinition/plandefinition-azathioprine-need-test"
+          }
+        },
+        {
+          "example": true,
+          "name": "Decision Support Rule - Azathioprine Poor Status",
+          "description": "Decision support rule to detect and report Azathioprine Myelotoxicity poor status guidance.",
+          "sourceReference": {
+            "reference": "PlanDefinition/plandefinition-azathioprine-poor-status"
+          }
+        }
+      ]
+    }
+  ],
+  "binary": [
+    "AbacavirOrderingPharmacogenomicSupport.cql",
+    "AzathioprineOrderingPharmacogenomicSupport.cql"
+  ],
+  "page": {
+    "source": "index.html",
+    "title": "Pharmacogenomic Ordering Support",
+    "kind": "page",
+    "format": "html"
+  }
+}

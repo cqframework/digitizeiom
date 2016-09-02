@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="decisionsupportrule-abacavir-hypersensitivity-positive"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Abacavir Hypersensitivity Intervention - Positive</div>
+  </text>
+  <contained>
+    <ActivityDefinition>
+      <id value="hypersensitivity-to-abacavir-alert"/>
+      <status value="active"/>
+      <category value="communication"/>
+      <dynamicValue>
+        <path value="sender"/>
+        <expression value="CDS System"/>
+      </dynamicValue>
+      <dynamicValue>
+        <path value="recipient"/>
+        <expression value="Primary Provider"/>
+      </dynamicValue>
+      <dynamicValue>
+        <path value="payload.content"/>
+        <expression value="&#39;The HLA-B*57:01 allele is present in this patient. This allele is associated with high risk of severe         hypersensitivity to abacavir. HLA-B*57:01 positive patients should NOT be prescribed abacavir. Please         choose an alternate antiretroviral. For more information, please consult a {{recommended clinical         professional for consultation, for example some institutions might direct to a clinical pharmacist}}.&#39;"/>
+      </dynamicValue>
+      <dynamicValue>
+        <path value="status"/>
+        <expression value="&#39;proposed&#39;"/>
+      </dynamicValue>
+      <dynamicValue>
+        <path value="encounter"/>
+        <expression value="Encounter"/>
+      </dynamicValue>
+      <dynamicValue>
+        <path value="scheduled"/>
+        <expression value="Now()"/>
+      </dynamicValue>
+      <dynamicValue>
+        <path value="reason"/>
+        <expression value="Genotype Test Results Positive For HLA-B*57:01 Allele"/>
+      </dynamicValue>
+      <dynamicValue>
+        <path value="requestedOn"/>
+        <expression value="Now()"/>
+      </dynamicValue>
+      <dynamicValue>
+        <path value="subject"/>
+        <expression value="Patient"/>
+      </dynamicValue>
+      <dynamicValue>
+        <path value="priority"/>
+        <expression value="Code &#39;urgent&#39; from DiagnosticPriority display &#39;Urgent&#39;"/>
+      </dynamicValue>
+    </ActivityDefinition>
+  </contained>
+  <identifier>
+    <use value="official"/>
+    <value value="abacavir-hypersensitivity-positive"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <title value="Abacavir Hypersensitivity Positive"/>
+  <status value="active"/>
+  <description value="Abacavir hypersensitivity intervention to alert the user that the patient&#39;s genotype test results indicate a hypersensitivity to Abacavir."/>
+  <publicationDate value="2016-04-01"/>
+  <topic>
+    <text value="Abacavir Hypersensitivity - Positive Finding"/>
+  </topic>
+  <library>
+    <reference value="Library/library-abacavir-hypersensitivity-cds-logic"/>
+  </library>
+  <actionDefinition>
+    <title value="Patient Shows Hypersensitivity to Abacavir in Genotype Test Results."/>
+    <textEquivalent value="The HLA-B*57:01 allele is present in the Patient&#39;s Genotype Test results."/>
+    <triggerDefinition>
+      <type value="data-added"/>
+      <eventData>
+        <type value="MedicationOrder"/>
+      <!--  <profile value="http://hl7.org/fhir/StructureDefinition/MedicationOrder"/>  -->
+        <codeFilter>
+          <path value="code"/>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://snomed.org/sct"/>
+              <code value="387005008"/>
+            </coding>
+            <text value="Abacavir (substance)"/>
+          </valueCodeableConcept>
+        </codeFilter>
+      </eventData>
+    </triggerDefinition>
+    <condition>
+      <language value="text/cql"/>
+      <expression value="Should Notify User of Patient&#39;s Hypersensitivity"/>
+    </condition>
+    <participantType value="practitioner"/>
+    <type>
+      <code value="create"/>
+    </type>
+    <activityDefinition>
+      <reference value="#hypersensitivity-to-abacavir-alert"/>
+    </activityDefinition>
+  </actionDefinition>
+</PlanDefinition>

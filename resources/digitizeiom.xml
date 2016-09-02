@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+	<id value="digitizeiom"/>
+	<url value="http://hl7.org/fhir/digitizeiom"/>
+	<version value="1"/>
+	<name value="DIGITizE Pharmacogenomic Ordering Support IOM"/>
+	<status value="draft"/>
+	<experimental value="false"/>
+	<publisher value="Hl7 CDS"/>
+	<date value="2016-03-20T23:16:43-06:00"/>
+	<description value="Establishing Connectivity and Pharmacogenomic Clinical Decision Support Rules to Protect Patients Carrying HLA-B*57:01 and TPMT Variants"/>
+	<fhirVersion value="1.0.1"/>
+	<package>
+		<name value="Abacavir and Azathioprine Sensitivity"/>
+		<resource>
+			<example value="true"/>
+			<name value="Library - Abacavir Ordering"/>
+			<description value="Logic to determine the whether or not an order of Abacavir is appropriate for a patient and alert the user if it is not."/>
+			<sourceReference>
+				<reference value="Library/library-abacavir-hypersensitivity-cds-logic"/>
+			</sourceReference>
+			<!--sourceUri value="library-abacavir-hypersensitivity-cds-logic.xml"/-->
+			<!--exampleFor>
+				<reference value="StructureDefinition/Library"/>
+			</exampleFor-->
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="Library - Azathioprine Ordering"/>
+			<description value="Logic to determine the whether or not the dosage of Azathioprine is appropriate for a patient and alert the user if it is not."/>
+			<sourceReference>
+				<reference value="Library/library-azathioprine-myelotoxicity-cds-logic"/>
+			</sourceReference>
+			<!--sourceUri value="library-azathioprine-myelotoxicity-cds-logic.xml"/-->
+			<!--exampleFor>
+				<reference value="StructureDefinition/Library"/>
+			</exampleFor-->
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="Decision Support Rule - Abacavir Conflicting Statuses"/>
+			<description value="Decision support rule to detect and report conflicting Abacavir Sensitivity tests."/>
+			<sourceReference>
+				<reference value="PlanDefinition/plandefinition-abacavir-conflicting-statuses"/>
+			</sourceReference>
+			<!--sourceUri value="plandefinition-abacavir-conflicting-statuses.xml"/-->
+			<!--exampleFor>
+				<reference value="StructureDefinition/PlanDefinition"/>
+			</exampleFor-->
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="Decision Support Rule - Abacavir Hypersensitivity"/>
+			<description value="Decision support rule to detect and report Abacavir Hypersensitivity."/>
+			<sourceReference>
+				<reference value="PlanDefinition/plandefinition-abacavir-hypersensitivity-positive"/>
+			</sourceReference>
+			<!--sourceUri value="plandefinition-abacavir-hypersensitivity-positive.xml"/-->
+			<!--exampleFor>
+				<reference value="StructureDefinition/PlanDefinition"/>
+			</exampleFor-->
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="Decision Support Rule - Abacavir Test Required"/>
+			<description value="Decision support rule to detect and report the need for an Abacavir Sensitivity test."/>
+			<sourceReference>
+				<reference value="PlanDefinition/plandefinition-abacavir-need-test"/>
+			</sourceReference>
+			<!--sourceUri value="plandefinition-abacavir-need-test.xml"/-->
+			<!--exampleFor>
+				<reference value="StructureDefinition/PlanDefinition"/>
+			</exampleFor-->
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="Decision Support Rule - Azathioprine Conflicting Statuses"/>
+			<description value="Decision support rule to detect and report conflicting Azathioprine Myelotoxicity tests."/>
+			<sourceReference>
+				<reference value="PlanDefinition/plandefinition-azathioprine-conflicting-statuses"/>
+			</sourceReference>
+			<!--sourceUri value="plandefinition-azathioprine-conflicting-statuses.xml"/-->
+			<!--exampleFor>
+				<reference value="StructureDefinition/PlanDefinition"/>
+			</exampleFor-->
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="Decision Support Rule - Azathioprine Lower Dosage"/>
+			<description value="Decision support rule to detect and report Azathioprine dosage level guidance."/>
+			<sourceReference>
+				<reference value="PlanDefinition/plandefinition-azathioprine-lower-dosage"/>
+			</sourceReference>
+			<!--sourceUri value="plandefinition-azathioprine-lower-dosage.xml"/-->
+			<!--exampleFor>
+				<reference value="StructureDefinition/PlanDefinition"/>
+			</exampleFor-->
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="Decision Support Rule - Azathioprine Test Required"/>
+			<description value="Decision support rule to detect and report the need for an Azathioprine Myelotoxicity test."/>
+			<sourceReference>
+				<reference value="PlanDefinition/plandefinition-azathioprine-need-test"/>
+			</sourceReference>
+			<!--sourceUri value="plandefinition-azathioprine-need-test.xml"/-->
+			<!--exampleFor>
+				<reference value="StructureDefinition/PlanDefinition"/>
+			</exampleFor-->
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="Decision Support Rule - Azathioprine Poor Status"/>
+			<description value="Decision support rule to detect and report Azathioprine Myelotoxicity poor status guidance."/>
+			<sourceReference>
+				<reference value="PlanDefinition/plandefinition-azathioprine-poor-status"/>
+			</sourceReference>
+			<!--sourceUri value="plandefinition-azathioprine-poor-status.xml"/-->
+			<!--exampleFor>
+				<reference value="StructureDefinition/PlanDefinition"/>
+			</exampleFor-->
+		</resource>
+	</package>
+	<binary value="AbacavirOrderingPharmacogenomicSupport.cql"/>
+	<binary value="AzathioprineOrderingPharmacogenomicSupport.cql"/>
+	<page>
+		<source value="index.html"/>
+		<title value="Pharmacogenomic Ordering Support"/>
+		<kind value="page"/>
+		<format value="html"/>
+	</page>
+</ImplementationGuide>

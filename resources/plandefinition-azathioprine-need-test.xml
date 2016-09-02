@@ -1,0 +1,153 @@
+<PlanDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/decisionsupportrule.xsd">
+	<id value="decisionsupportrule-azathioprine-need-test"/>
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">Azathioprine Myelotoxicity Intervention - Need Test</div>
+	</text>
+	<contained>
+		<ActivityDefinition>
+			<id value="create-diagnostic-order-for-tpmt-test"/>
+			<status value="active"/>
+			<category value="diagnostic"/>
+			<dynamicValue>
+				<path value="stage"/>
+				<expression value="Code 'proposal' from RequestStage display 'Proposal'"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="code"/>
+				<expression value="Genotype Results for TPMT"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="subject"/>
+				<expression value="Patient"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="occurrenceDateTime"/>
+				<expression value="Now()"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="requester"/>
+				<expression value="CDS System"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="reason"/>
+				<expression value="'The patient is being prescribed Abacavir without appropriate genotype testing for Abacavir sensitivity.'"/>
+			</dynamicValue>
+		</ActivityDefinition>
+	</contained>
+	<contained>
+		<ActivityDefinition>
+			<id value="missing-tpmt-test-alert"/>
+			<status value="active"/>
+			<category value="communication"/>
+			<dynamicValue>
+				<path value="sender"/>
+				<expression value="CDS System"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="recipient"/>
+				<expression value="Primary Provider"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="payload.content"/>
+				<expression value="'An order for Abacavir has been made for the patient without proper genotype screening'"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="payload.content"/>
+				<expression value="'TPMT test is recommended before using a thiopurine (mercaptopurine, thioguanine, and azathioprine).
+        A TPMT genotype test does not appear to have been ordered for this patient. An unsigned order has been created to perform
+        this test, {{click here to sign the order}}'"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="status"/>
+				<expression value="'proposed'"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="encounter"/>
+				<expression value="Encounter"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="scheduled"/>
+				<expression value="Now()"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="reason"/>
+				<expression value="Missing TPMT Test"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="requestedOn"/>
+				<expression value="Now()"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="subject"/>
+				<expression value="Patient"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="priority"/>
+				<expression value="Code 'urgent' from DiagnosticPriority display 'Urgent'"/>
+			</dynamicValue>
+		</ActivityDefinition>
+	</contained>
+	<identifier>
+		<use value="official"/>
+		<value value="azathioprine-myelotoxicity-need-test"/>
+	</identifier>
+	<version value="1.0.0"/>
+	<title value="Azathioprine Myelotoxicity Need Test"/>
+	<status value="active"/>
+	<description value="Azathioprine myelotoxicity intervention to alert the user that a TPMT genotype test should be administered."/>
+	<publicationDate value="2016-04-01"/>
+	<topic>
+		<text value="Azathioprine Myelotoxicity - Need Test"/>
+	</topic>
+	<library>
+		<reference value="Library/library-azathioprine-myelotoxicity-cds-logic"/>
+	</library>
+	<actionDefinition>
+		<title value="Patient should be administered a TPMT Genotype Test."/>
+		<triggerDefinition>
+			<type value="data-added"/>
+			<eventData>
+				<type value="MedicationOrder"/>
+				<codeFilter>
+					<path value="code"/>
+					<valueCodeableConcept>
+						<coding>
+							<system value="http://snomed.org/sct"/>
+							<code value="372574004"/>
+						</coding>
+						<text value="Azathioprine (substance)"/>
+					</valueCodeableConcept>
+				</codeFilter>
+			</eventData>
+		</triggerDefinition>
+		<condition>
+			<language value="text/cql"/>
+			<expression value="Needs TPMT Test"/>
+		</condition>
+		<actionDefinition>
+			<title value="Create the TPMT Genotype Test."/>
+			<textEquivalent value="Administer a TPMT Genotype Test."/>
+			<participantType value="practitioner"/>
+			<type>
+				<code value="create"/>
+			</type>
+			<dynamicValue>
+				<path value="/"/>
+				<expression value="create-diagnostic-order-for-tpmt-genotype-test"/>
+			</dynamicValue>
+		</actionDefinition>
+		<actionDefinition>
+			<title value="Notify the provider to sign the order."/>
+			<textEquivalent value="A TPMT Genotype Test is recommended, please authorize or reject the order."/>
+			<participantType value="practitioner"/>
+			<type>
+				<code value="create"/>
+			</type>
+			<dynamicValue>
+				<path value="/"/>
+				<expression value="missing-tpmt-test-alert"/>
+			</dynamicValue>
+		</actionDefinition>
+	</actionDefinition>
+</PlanDefinition>

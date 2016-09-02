@@ -1,0 +1,125 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "decisionsupportrule-azathioprine-conflicting-statuses",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Azathioprine Myelotoxicity Intervention - Conflicting Statuses</div>"
+  },
+  "contained": [
+    {
+      "resourceType": "ActivityDefinition",
+      "id": "conflicting-test-results-alert",
+      "status": "active",
+      "category": "communication",
+      "dynamicValue": [
+        {
+          "path": "sender",
+          "expression": "CDS System"
+        },
+        {
+          "path": "recipient",
+          "expression": "Primary Provider"
+        },
+        {
+          "path": "payload.content",
+          "expression": "'There are two conflicting TPMT results for this patient which must be resolved. Consult with a clinical pharmacist or laboratory professional to resolve the conflict.'"
+        },
+        {
+          "path": "status",
+          "expression": "'proposed'"
+        },
+        {
+          "path": "encounter",
+          "expression": "Encounter"
+        },
+        {
+          "path": "scheduled",
+          "expression": "Now()"
+        },
+        {
+          "path": "reason",
+          "expression": "Conflicting TPMT Test Results"
+        },
+        {
+          "path": "requestedOn",
+          "expression": "Now()"
+        },
+        {
+          "path": "subject",
+          "expression": "Patient"
+        },
+        {
+          "path": "priority",
+          "expression": "Code 'routine' from DiagnosticPriority display 'Routine'"
+        }
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "use": "official",
+      "value": "azathioprine-myelotoxicity-conflicting-statuses"
+    }
+  ],
+  "version": "1.0.0",
+  "title": "Azathioprine Myelotoxicity Conflicting Statuses",
+  "status": "active",
+  "description": "Azathioprine myelotoxicity intervention to alert the user that conflicting statuses were found in the patient's TPMT genotype test results.",
+  "publicationDate": "2016-04-01",
+  "topic": [
+    {
+      "text": "Azathioprine Myelotoxicity - Conflicting Statuses"
+    }
+  ],
+  "library": [
+    {
+      "reference": "Library/library-azathioprine-myelotoxicity-cds-logic"
+    }
+  ],
+  "actionDefinition": [
+    {
+      "title": "Patient Shows Conflicting Statuses in TPMT Genotype Test Results.",
+      "textEquivalent": "The Patient has conflicting statuses in their TPMT Genotype Test results.",
+      "triggerDefinition": [
+        {
+          "type": "data-added",
+          "eventData": {
+            "type": "MedicationOrder",
+            "codeFilter": [
+              {
+                "path": "code",
+                "valueCodeableConcept": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://snomed.org/sct",
+                        "code": "372574004"
+                      }
+                    ],
+                    "text": "Azathioprine (substance)"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "condition": {
+        "language": "text/cql",
+        "expression": "Should Notify User of Conflicting Statuses"
+      },
+      "participantType": [
+        "practitioner"
+      ],
+      "type": {
+        "code": "create"
+      },
+      "dynamicValue": [
+        {
+          "path": "/",
+          "expression": "Conflicting TPMT Test Results Alert"
+        }
+      ]
+    }
+  ]
+}

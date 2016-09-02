@@ -1,0 +1,122 @@
+﻿<html>
+<head>
+  <title>ImplementationGuide-digitizeiom-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://hl7-fhir.github.io/implementationguide.html">resourceType</a>" : "ImplementationGuide",
+  "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.url">url</a>" : "http://hl7.org/fhir/digitizeiom",
+  "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.version">version</a>" : "1",
+  "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.name">name</a>" : "DIGITizE Pharmacogenomic Ordering Support IOM",
+  "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.status">status</a>" : "draft",
+  "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.experimental">experimental</a>" : false,
+  "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.publisher">publisher</a>" : "Hl7 CDS",
+  "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.date">date</a>" : "2016-03-20T23:16:43-06:00",
+  "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.description">description</a>" : "Establishing Connectivity and Pharmacogenomic Clinical Decision Support Rules to Protect Patients Carrying HLA-B*57:01 and TPMT Variants",
+  "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.fhirVersion">fhirVersion</a>" : "1.0.1",
+  "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package">package</a>" : [
+    {
+      "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.name">name</a>" : "Abacavir and Azathioprine Sensitivity",
+      "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource">resource</a>" : [
+        {
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "Library-library-abacavir-hypersensitivity-cds-logic.html"
+            }
+          },
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Library - Abacavir Ordering",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Logic to determine the whether or not an order of Abacavir is appropriate for a patient and alert the user if it is not.",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "Library/library-abacavir-hypersensitivity-cds-logic"
+          }
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7-fhir.github.io/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "Library-library-azathioprine-myelotoxicity-cds-logic.html"
+            }
+          },
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Library - Azathioprine Ordering",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Logic to determine the whether or not the dosage of Azathioprine is appropriate for a patient and alert the user if it is not.",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "Library/library-azathioprine-myelotoxicity-cds-logic"
+          }
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Decision Support Rule - Abacavir Conflicting Statuses",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Decision support rule to detect and report conflicting Abacavir Sensitivity tests.",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "PlanDefinition/plandefinition-abacavir-conflicting-statuses"
+          }
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Decision Support Rule - Abacavir Hypersensitivity",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Decision support rule to detect and report Abacavir Hypersensitivity.",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "PlanDefinition/plandefinition-abacavir-hypersensitivity-positive"
+          }
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Decision Support Rule - Abacavir Test Required",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Decision support rule to detect and report the need for an Abacavir Sensitivity test.",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "PlanDefinition/plandefinition-abacavir-need-test"
+          }
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Decision Support Rule - Azathioprine Conflicting Statuses",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Decision support rule to detect and report conflicting Azathioprine Myelotoxicity tests.",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "PlanDefinition/plandefinition-azathioprine-conflicting-statuses"
+          }
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Decision Support Rule - Azathioprine Lower Dosage",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Decision support rule to detect and report Azathioprine dosage level guidance.",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "PlanDefinition/plandefinition-azathioprine-lower-dosage"
+          }
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Decision Support Rule - Azathioprine Test Required",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Decision support rule to detect and report the need for an Azathioprine Myelotoxicity test.",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "PlanDefinition/plandefinition-azathioprine-need-test"
+          }
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Decision Support Rule - Azathioprine Poor Status",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Decision support rule to detect and report Azathioprine Myelotoxicity poor status guidance.",
+          "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "PlanDefinition/plandefinition-azathioprine-poor-status"
+          }
+        }
+      }
+    }
+  },
+  "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.binary">binary</a>" : [
+    "AbacavirOrderingPharmacogenomicSupport.cql",
+    "AzathioprineOrderingPharmacogenomicSupport.cql"
+  },
+  "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.page">page</a>" : {
+    "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.page.source">source</a>" : "index.html",
+    "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.page.title">title</a>" : "Pharmacogenomic Ordering Support",
+    "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.page.kind">kind</a>" : "page",
+    "<a href="http://hl7-fhir.github.io/implementationguide.html#ImplementationGuide.page.format">format</a>" : "html"
+  }
+}</pre>
+</body>
+</html>

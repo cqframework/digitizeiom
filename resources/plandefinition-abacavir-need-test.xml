@@ -1,0 +1,157 @@
+<PlanDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/decisionsupportrule.xsd">
+	<id value="decisionsupportrule-abacavir-need-test"/>
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">Abacavir Hypersensitivity Intervention - Need Test</div>
+	</text>
+	<contained>
+		<ActivityDefinition>
+			<id value="create-diagnostic-order-for-genotype-test"/>
+			<status value="active"/>
+			<category value="diagnostic"/>
+			<dynamicValue>
+				<path value="stage"/>
+				<expression value="Code 'proposal' from RequestStage display 'Proposal'"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="code"/>
+				<expression value="Genotype Results for HLA-B*57:01 Allele"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="subject"/>
+				<expression value="Patient"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="occurrenceDateTime"/>
+				<expression value="Now()"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="requester"/>
+				<expression value="CDS System"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="reason"/>
+				<expression value="'The patient is being prescribed Abacavir without appropriate genotype testing for Abacavir sensitivity.'"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="supportingInformation"/>
+				<expression value="Observed HLA-B*57:01 Allele"/>
+			</dynamicValue>
+		</ActivityDefinition>
+	</contained>
+	<contained>
+		<ActivityDefinition>
+			<id value="missing-genotype-test-alert"/>
+			<status value="active"/>
+			<category value="communication"/>
+			<dynamicValue>
+				<path value="sender"/>
+				<expression value="CDS System"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="recipient"/>
+				<expression value="Primary Provider"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="payload.content"/>
+				<expression value="'An order for Abacavir has been made for the patient without proper genotype screening'"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="payload.content"/>
+				<expression value="'An HLA-B*57:01 genotype test is recommended before prescribing abacavir per the FDA\'s black box warning
+        regarding the risk of serious hypersensitivity reactions in patients that carry this allele. A HLA-B*57:01
+        genotype test does not appear to have been ordered for this patient. An unsigned order has been created to perform
+        this test, {{click here to sign the order}}'"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="status"/>
+				<expression value="'proposed'"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="encounter"/>
+				<expression value="Encounter"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="scheduled"/>
+				<expression value="Now()"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="reason"/>
+				<expression value="Needs Genotype Test"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="requestedOn"/>
+				<expression value="Now()"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="subject"/>
+				<expression value="Patient"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="priority"/>
+				<expression value="Code 'urgent' from DiagnosticPriority display 'Urgent'"/>
+			</dynamicValue>
+		</ActivityDefinition>
+	</contained>
+	<identifier>
+		<use value="official"/>
+		<value value="abacavir-hypersensitivity-need-test"/>
+	</identifier>
+	<version value="1.0.0"/>
+	<title value="Abacavir Hypersensitivity Intervention Need Test"/>
+	<status value="active"/>
+	<description value="Abacavir hypersensitivity intervention to alert the user that a genotype test should be administered."/>
+	<publicationDate value="2016-04-01"/>
+	<topic>
+		<text value="Abacavir Hypersensitivity - Need Test"/>
+	</topic>
+	<library>
+		<reference value="Library/library-abacavir-hypersensitivity-cds-logic"/>
+	</library>
+	<actionDefinition>
+		<title value="Patient should be administered a Genotype Test."/>
+		<triggerDefinition>
+			<type value="data-added"/>
+			<eventData>
+				<type value="MedicationOrder"/>
+				<!-- <profile value="http://hl7.org/fhir/StructureDefinition/MedicationOrder"/> -->
+				<codeFilter>
+					<path value="code"/>
+					<valueCodeableConcept>
+						<coding>
+							<system value="http://snomed.org/sct"/>
+							<code value="387005008"/>
+						</coding>
+						<text value="Abacavir (substance)"/>
+					</valueCodeableConcept>
+				</codeFilter>
+			</eventData>
+		</triggerDefinition>
+		<condition>
+			<language value="text/cql"/>
+			<expression value="Needs Genotype Test"/>
+		</condition>
+		<actionDefinition>
+			<title value="Create the Genotype Test."/>
+			<textEquivalent value="Administer a Genotype Test."/>
+			<participantType value="practitioner"/>
+			<type>
+				<code value="create"/>
+			</type>
+			<activityDefinition>
+				<reference value="#create-diagnostic-order-for-genotype-test"/>
+			</activityDefinition>
+		</actionDefinition>
+		<actionDefinition>
+			<title value="Notify the provider to sign the order."/>
+			<textEquivalent value="A Genotype Test is recommended, please authorize or reject the order."/>
+			<participantType value="practitioner"/>
+			<type>
+				<code value="create"/>
+			</type>
+			<activityDefinition>
+				<reference value="#missing-genotype-test-alert"/>
+			</activityDefinition>
+		</actionDefinition>
+	</actionDefinition>
+</PlanDefinition>

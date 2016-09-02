@@ -1,0 +1,108 @@
+<PlanDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/decisionsupportrule.xsd">
+	<id value="decisionsupportrule-azathioprine-lower-dosage"/>
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">Azathioprine Myelotoxicity Intervention - Lower Dosage</div>
+	</text>
+	<contained>
+		<ActivityDefinition>
+			<id value="intermediate-tpmt-metabolizer-detected-alert"/>
+			<status value="active"/>
+			<category value="communication"/>
+			<dynamicValue>
+				<path value="sender"/>
+				<expression value="CDS System"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="recipient"/>
+				<expression value="Primary Provider"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="payload.content"/>
+				<expression value="'Testing has been performed and indicates that this patient is at INCREASED risk for myelotoxicity with standard dosing of thiopurine therapy.'"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="payload.content"/>
+				<expression value="'Based on a test result, this patient is predicted to be an intermediate TPMT metabolizer.
+          The patient is at risk for myelosuppression with normal doses of azathioprine. A normal starting dose
+          of azathioprine (e.g. 2-3 mg/kg/day) should be reduced to 0.6 – 2 mg/kg/day. Please consult a
+          {{recommended clinical professional for consultation, for example some institutions might direct to a clinical pharmacist}}.'"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="status"/>
+				<expression value="'proposed'"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="encounter"/>
+				<expression value="Encounter"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="scheduled"/>
+				<expression value="Now()"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="reason"/>
+				<expression value="Intermediate TPMT Metabolizer Detected"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="requestedOn"/>
+				<expression value="Now()"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="subject"/>
+				<expression value="Patient"/>
+			</dynamicValue>
+			<dynamicValue>
+				<path value="priority"/>
+				<expression value="Code 'urgent' from DiagnosticPriority display 'Urgent'"/>
+			</dynamicValue>
+		</ActivityDefinition>
+	</contained>
+	<identifier>
+		<use value="official"/>
+		<value value="azathioprine-myelotoxicity-lower-dosage"/>
+	</identifier>
+	<version value="1.0.0"/>
+	<title value="Azathioprine Myelotoxicity Lower Dosage"/>
+	<status value="active"/>
+	<description value="Azathioprine myelotoxicity intervention to alert the user that the dosage of Azathioprine should be lowered due to the patient's intermediate metabolizer status."/>
+	<publicationDate value="2016-04-01"/>
+	<topic>
+		<text value="Azathioprine Myelotoxicity - Lower Dosage"/>
+	</topic>
+	<library>
+		<reference value="Library/library-azathioprine-myelotoxicity-cds-logic"/>
+	</library>
+	<actionDefinition>
+		<title value="Patient Shows Intermediate Metabolic Status in TPMT Genotype Test Results."/>
+		<textEquivalent value="The Patient has intermediate metabolic status in their TPMT Genotype Test results."/>
+		<triggerDefinition>
+			<type value="data-added"/>
+			<eventData>
+				<type value="MedicationOrder"/>
+				<codeFilter>
+					<path value="code"/>
+					<valueCodeableConcept>
+						<coding>
+							<system value="http://snomed.org/sct"/>
+							<code value="372574004"/>
+						</coding>
+						<text value="Azathioprine (substance)"/>
+					</valueCodeableConcept>
+				</codeFilter>
+			</eventData>
+		</triggerDefinition>
+		<condition>
+			<language value="text/cql"/>
+			<expression value="Should Notify User to Lower Dosage"/>
+		</condition>
+		<participantType value="practitioner"/>
+		<type>
+			<code value="create"/>
+		</type>
+		<dynamicValue>
+			<path value="/"/>
+			<expression value="intermediate-tpmt-metabolizer-detected-alert"/>
+		</dynamicValue>
+	</actionDefinition>
+</PlanDefinition>
