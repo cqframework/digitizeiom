@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <identifier id="AzathioprineOrderingPharmacogenomicSupport" version="1"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localIdentifier="FHIR" uri="http://hl7.org/fhir" version="1.6"/>
+   </usings>
+   <includes>
+      <def localIdentifier="FHIRHelpers" path="FHIRHelpers" version="1.6"/>
+   </includes>
+   <codeSystems>
+      <def name="LOINC" id="http://loinc.org" accessLevel="Public"/>
+      <def name="DiagnosticPriority" id="http://hl7.org/fhir/diagnostic-order-priority" accessLevel="Public"/>
+   </codeSystems>
+   <statements>
+      <def name="Genotype Results for TPMT" context="Patient" accessLevel="Public">
+         <expression code="79713-4" display="TPMT gene product metabolic activity interpretation" xsi:type="Code">
+            <system name="LOINC"/>
+         </expression>
+      </def>
+      <def name="TPMT Results" context="Patient" accessLevel="Public">
+         <expression dataType="fhir:Observation" codeProperty="code" xsi:type="Retrieve">
+            <codes name="Genotype Results for TPMT" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def name="Needs TPMT Test" context="Patient" accessLevel="Public">
+         <expression xsi:type="Not">
+            <operand xsi:type="Exists">
+               <operand name="TPMT Results" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+      <def name="Normal Status" context="Patient" accessLevel="Public">
+         <expression xsi:type="Query">
+            <source alias="T">
+               <expression name="TPMT Results" xsi:type="ExpressionRef"/>
+            </source>
+            <where xsi:type="Equivalent">
+               <operand name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand path="valueCodeableConcept" scope="T" xsi:type="Property"/>
+               </operand>
+               <operand xsi:type="ToConcept">
+                  <operand classType="t:Code" xsi:type="Instance">
+                     <element name="code">
+                        <value valueType="t:String" value="LA25391-6" xsi:type="Literal"/>
+                     </element>
+                     <element name="system">
+                        <value valueType="t:String" value="http://loinc.org" xsi:type="Literal"/>
+                     </element>
+                     <element name="display">
+                        <value valueType="t:String" value="Normal Metabolizer" xsi:type="Literal"/>
+                     </element>
+                  </operand>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def name="Intermediate Status" context="Patient" accessLevel="Public">
+         <expression xsi:type="Query">
+            <source alias="T">
+               <expression name="TPMT Results" xsi:type="ExpressionRef"/>
+            </source>
+            <where xsi:type="Equivalent">
+               <operand name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand path="valueCodeableConcept" scope="T" xsi:type="Property"/>
+               </operand>
+               <operand xsi:type="ToConcept">
+                  <operand classType="t:Code" xsi:type="Instance">
+                     <element name="code">
+                        <value valueType="t:String" value="LA10317-8" xsi:type="Literal"/>
+                     </element>
+                     <element name="system">
+                        <value valueType="t:String" value="http://loinc.org" xsi:type="Literal"/>
+                     </element>
+                     <element name="display">
+                        <value valueType="t:String" value="Intermediate Metabolizer" xsi:type="Literal"/>
+                     </element>
+                  </operand>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def name="Poor Status" context="Patient" accessLevel="Public">
+         <expression xsi:type="Query">
+            <source alias="T">
+               <expression name="TPMT Results" xsi:type="ExpressionRef"/>
+            </source>
+            <where xsi:type="Equivalent">
+               <operand name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand path="valueCodeableConcept" scope="T" xsi:type="Property"/>
+               </operand>
+               <operand xsi:type="ToConcept">
+                  <operand classType="t:Code" xsi:type="Instance">
+                     <element name="code">
+                        <value valueType="t:String" value="LA9657-3" xsi:type="Literal"/>
+                     </element>
+                     <element name="system">
+                        <value valueType="t:String" value="http://loinc.org" xsi:type="Literal"/>
+                     </element>
+                     <element name="display">
+                        <value valueType="t:String" value="Poor Metabolizer" xsi:type="Literal"/>
+                     </element>
+                  </operand>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def name="Should Notify User of Conflicting Statuses" context="Patient" accessLevel="Public">
+         <expression xsi:type="Or">
+            <operand xsi:type="And">
+               <operand xsi:type="Exists">
+                  <operand name="Normal Status" xsi:type="ExpressionRef"/>
+               </operand>
+               <operand xsi:type="Exists">
+                  <operand name="Intermediate Status" xsi:type="ExpressionRef"/>
+               </operand>
+            </operand>
+            <operand xsi:type="Exists">
+               <operand name="Poor Status" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+      <def name="Should Notify User to Lower Dosage" context="Patient" accessLevel="Public">
+         <expression xsi:type="And">
+            <operand xsi:type="Exists">
+               <operand name="Intermediate Status" xsi:type="ExpressionRef"/>
+            </operand>
+            <operand xsi:type="Not">
+               <operand name="Should Notify User of Conflicting Statuses" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+      <def name="Most Recent Record Poor Status" context="Patient" accessLevel="Public">
+         <expression xsi:type="Equivalent">
+            <operand name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand path="valueCodeableConcept" xsi:type="Property">
+                  <source xsi:type="Last">
+                     <source xsi:type="Query">
+                        <source alias="T">
+                           <expression name="TPMT Results" xsi:type="ExpressionRef"/>
+                        </source>
+                        <sort>
+                           <by direction="asc" xsi:type="ByExpression">
+                              <expression path="effectiveDateTime" scope="T" xsi:type="Property"/>
+                           </by>
+                        </sort>
+                     </source>
+                  </source>
+               </operand>
+            </operand>
+            <operand xsi:type="ToConcept">
+               <operand classType="t:Code" xsi:type="Instance">
+                  <element name="code">
+                     <value valueType="t:String" value="LA9657-3" xsi:type="Literal"/>
+                  </element>
+                  <element name="system">
+                     <value valueType="t:String" value="http://loinc.org" xsi:type="Literal"/>
+                  </element>
+                  <element name="display">
+                     <value valueType="t:String" value="Poor Metabolizer" xsi:type="Literal"/>
+                  </element>
+               </operand>
+            </operand>
+         </expression>
+      </def>
+      <def name="Should Notify User of Poor Status in Most Recent Record" context="Patient" accessLevel="Public">
+         <expression name="Most Recent Record Poor Status" xsi:type="ExpressionRef"/>
+      </def>
+   </statements>
+</library>
+
+

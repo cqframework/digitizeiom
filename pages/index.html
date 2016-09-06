@@ -74,10 +74,10 @@
              <div class="inner-wrapper">
 
 <div class="col-9">
-  <a name="pCDS"/>
+  <a name="pCDS"></a>
   <h2>Pharmacogenomic Clinical Decision Support Implementation Guide</h2>
 
-  <a name="introduction"/>
+  <a name="introduction"></a>
   <h3>Introduction</h3>
 
   <p>
@@ -104,7 +104,7 @@
   <p>The goal of this guide is to specify how system developers and healthcare organizations can implement this clinical decision support.
     It begins with a proposed standardized process for transmitting the data needed to underlie this support and then follows with a suggestion for how the CDS rules themselves could be implemented.</p>
 
-  <a name="scope"/>
+  <a name="scope"></a>
   <h3>Scope</h3>
 
 
@@ -117,7 +117,7 @@
     As this is done, it may make sense to update this implementation guide.  Users of this guide should be aware that this future work
     could involve deprecating the structures and strategies proposed below.</p>
 
-    <a name="moving"/>
+    <a name="moving"></a>
     <h3>Moving the Data</h3>
 
   <p>Laboratories that generate genetic test results often run different information systems than the providers who receive these results.
@@ -133,7 +133,7 @@
   <p>In the body of this guide we outline a method for moving the required data through HL7 Fast Healthcare Interoperability Resources (FHIR) - See description here: <a href="hl7.org/fhir/DSTU2/observation-genetics-cg-prf-1a.html">hl7.org/fhir/DSTU2/observation-genetics-cg-prf-1a.html</a>
     and example here: <a href="hl7.org/fhir/DSTU2/obs-genetics-example3-mutationlist-3.json.html">hl7.org/fhir/DSTU2/obs-genetics-example3-mutationlist-3.json.html</a>.</p>
 
-  <a name="rationale"/>
+  <a name="rationale"></a>
   <h5>Rationale</h5>
 
   <p>Our current goal is to build momentum for the exchange of genetic data, provide guidance for using these data in clinical decision support,
@@ -142,7 +142,7 @@
     The current method has limitations - for example, it does not support exchanging discrete variant information or other metadata.
     It is not intended to be a long-term solution and we plan to develop new guidance for exchanging data as this initiative progresses.</p>
 
-  <a name="g032"/>
+  <a name="g032"></a>
   <h5>Abacavir and HLA-B</h5>
   <p>The CPIC Delphi survey #3 Q7, related to the HLA-B alleles that are strongly associated with specific adverse effects to drugs,
     covers the absence or presence of the lab results for 3 different HLA-B alleles, each with a relationship to an adverse drug reaction for a unique drug.
@@ -163,7 +163,7 @@
     the section titled, LOINC Codes, and is expected to be integrated into the sending laboratory&#39;s FHIR test results and consumed by the
     receiving EHR&#39;s system so that it may be stored in a manner that supports the CDS pilot for abacavir.</p>
 
-  <a name="g033"/>
+  <a name="g033"></a>
   <h5>Azathioprine and TPMT</h5>
   <p>The CPIC Delphi survey #4 Q4, related to the pharmacogenetic gene phenotypes, covers the controlled vocabulary to be used by labs to
     report the interpreted phenotype based on the results of a pharmacogenetic test performed by the lab for several genes that code for drug
@@ -191,7 +191,7 @@
   <p>A new LOINC code is proposed in the following section and is expected to be integrated into the sending laboratory&#39;s FHIR test results and
     consumed by the receiving EHR&#39;s system so that it may be stored in a manner that supports the CDS pilot for azathioprine.</p>
 
-  <a name="g034"/>
+  <a name="g034"></a>
   <h5>Loinc Codes</h5>
   <p>The individual laboratory observation result codes that enable the CDS for abacavir and azathioprine are respectively referred to as
     HLA-B*57:01 [Presence] and TPMT Gene Product Metabolic Activity Interpretation.</p>
@@ -209,7 +209,7 @@
       provided below.</p>
   </blockquote>
 
-  <a name="g035"/>
+  <a name="g035"></a>
   <h5>HLA-B*57:01 [Presence]</h5>
   <p>The existing LOINC code, 50956-2: HLA-B*57:01[Presence], is designed to communicate either the presence or absence of the specific HLA-B*57:01 allele.
     <br/>Here are the details: (<a href="http://s.details.loinc.org/LOINC/50956-2.html?sections=Simple">http://s.details.loinc.org/LOINC/50956-2.html?sections=Simple <img src="../external.png" style="text-align: baseline"/></a>)</p>
@@ -301,7 +301,7 @@
     This guide does specify a requirement to use the SNOMED-CT values so that the receiving system can fulfill the CDS rules associated with this test
     result.</p> -->
 
-  <a name="g036"/>
+  <a name="g036"></a>
   <h3><span class="sectioncount">G.0.3.6</span> TPMT Gene Product Metabolic Activity Interpretation <a href="PharmacogenomicSupport-IG.html#g036" title="link to here" class="self-link"><img src="../target.png"/></a></h3>
   <p>A new LOINC observation code, 79713-4: TPMT gene product metabolic activity interpretation , has been created precisely to support the requirement for
     the azathioprine use case.  The details of the LOINC code follow: <a href="http://s.details.loinc.org/LOINC/79713-4.html?sections=Simple">http://s.details.loinc.org/LOINC/79713-4.html?sections=Simple</a>
@@ -369,7 +369,7 @@
     </div>
   </p>
 
-  <a name="g037"/>
+  <a name="g037"></a>
   <h5>Additional Use Cases</h5>
 
   <p>The following list of proposed LOINC codes are provided to complete the other HLA B alleles and Pharmacogenetic test results that are
@@ -393,7 +393,7 @@
     </ol>
   </p>
 
-  <a name="establishing"/>
+  <a name="establishing"></a>
   <h3>Establishing the Clinical Plan Definitions</h3>
   <p>
     Information provided below is intended to help implementers establish specific forms of clinical decision support.
@@ -408,7 +408,7 @@
     </em>
   </p>
 
-  <a name="g041"/>
+  <a name="g041"></a>
   <h5>Abacavir Order Phamacogenomic Support</h5>
   <p>For each order of Abacavir, the system should intervene if:
     <ul>
@@ -454,7 +454,7 @@
     </ul>
   </p>
   
-  <a name="g042"/>
+  <a name="g042"></a>
   <h5>Azathioprine Order Phamacogenomic Support</h5>
   <p>For each order of Azathioprine, the system should intervene if:
     <ul>
@@ -530,7 +530,7 @@
     </ul>
   </p>
   
-  <a name="content-index"/>
+  <a name="content-index"></a>
   <h3>Content Index</h3>
   
   <p>The following resources formalize the description of the logic and behavior defined by this implementation guide.</p>
@@ -540,21 +540,21 @@
 		  <tr><th>Resource</th><th>Type</th><th>Description</th></tr>
 	  </thead>
 	  <tbody>
-		  <tr><td><a href="plandefinition-abacavir-conflicting-statuses.xml">Abacavir Conflicting Statuses</a></td><td><a href="[%fhir-path%]plandefinition.html">Plan Definition</a></td><td>Detects conflicting statuses for Abacavir Sensitivity tests and notifies appropriately</td></tr>
-		  <tr><td><a href="plandefinition-abacavir-hypersensitivity-positive.xml">Abacavir Hypersensitivity</a></td><td><a href="[%fhir-path%]plandefinition.html">Plan Definition</a></td><td>Detects positive status for Abacavir Sensitivity and notifies appropriately</td></tr>
-		  <tr><td><a href="plandefinition-abacavir-need-test.xml">Abacavir Sensitivity Test Recommended</a></td><td><a href="[%fhir-path%]plandefinition.html">Plan Definition</a></td><td>Detects no results for Abacavir Sensitivity and notifies appropriately</td></tr>
-		  <tr><td><a href="plandefinition-azathioprine-conflicting-statuses.xml">Azathioprine Conflicting Statuses</a></td><td><a href="[%fhir-path%]plandefinition.html">Plan Definition</a></td><td>Detects conflicting statuses for Azathioprine Sensitivity tests and notifies appropriately</td></tr>
-		  <tr><td><a href="plandefinition-azathioprine-lower-dosage.xml">Azathioprine Lower Dosage</a></td><td><a href="[%fhir-path%]plandefinition.html">Plan Definition</a></td><td>Detects that a lower dosage of Azathioprine may be appropriate</td></tr>
-		  <tr><td><a href="plandefinition-azathioprine-need-test.xml">Azathioprine Test Recommended</a></td><td><a href="[%fhir-path%]plandefinition.html">Plan Definition</a></td><td>Detects no results for Azathioprine Sensitivity and notifies appropriately</td></tr>
-		  <tr><td><a href="plandefinition-azathioprine-poor-status.xml">Azathioprine Poor Status</a></td><td><a href="[%fhir-path%]plandefinition.html">Plan Definition</a></td><td>Detects potentially poor metabolism for Azathioprine and notifies appropriately</td></tr>
-		  <tr><td><a href="library-abacavir-hypersensitivity-cds-logic.xml">Abacavir Hypersensitivity Library</a></td><td><a href="[%fhir-path%]library.html">Library</a></td><td>The distributable library for Abacavir Sensitivity logic used by the Abacavir Sensitivity decision support rules.</td></tr>
-		  <tr><td><a href="library-azathioprine-myelotoxicity-cds-logic.xml">Abacavir Myelotoxicity Library</a></td><td><a href="[%fhir-path%]library.html">Library</a></td><td>The distributable library for Azathioprine Myelotoxicity logic used by the Azathioprine Myelotoxicity decision support rules.</td></tr>
+		  <tr><td><a href="plandefinition-abacavir-conflicting-statuses.xml">Abacavir Conflicting Statuses</a></td><td><a href="{{site.data.fhir.path}}/plandefinition.html">Plan Definition</a></td><td>Detects conflicting statuses for Abacavir Sensitivity tests and notifies appropriately</td></tr>
+		  <tr><td><a href="plandefinition-abacavir-hypersensitivity-positive.xml">Abacavir Hypersensitivity</a></td><td><a href="{{site.data.fhir.path}}/plandefinition.html">Plan Definition</a></td><td>Detects positive status for Abacavir Sensitivity and notifies appropriately</td></tr>
+		  <tr><td><a href="plandefinition-abacavir-need-test.xml">Abacavir Sensitivity Test Recommended</a></td><td><a href="{{site.data.fhir.path}}/plandefinition.html">Plan Definition</a></td><td>Detects no results for Abacavir Sensitivity and notifies appropriately</td></tr>
+		  <tr><td><a href="plandefinition-azathioprine-conflicting-statuses.xml">Azathioprine Conflicting Statuses</a></td><td><a href="{{site.data.fhir.path}}/plandefinition.html">Plan Definition</a></td><td>Detects conflicting statuses for Azathioprine Sensitivity tests and notifies appropriately</td></tr>
+		  <tr><td><a href="plandefinition-azathioprine-lower-dosage.xml">Azathioprine Lower Dosage</a></td><td><a href="{{site.data.fhir.path}}/plandefinition.html">Plan Definition</a></td><td>Detects that a lower dosage of Azathioprine may be appropriate</td></tr>
+		  <tr><td><a href="plandefinition-azathioprine-need-test.xml">Azathioprine Test Recommended</a></td><td><a href="{{site.data.fhir.path}}/plandefinition.html">Plan Definition</a></td><td>Detects no results for Azathioprine Sensitivity and notifies appropriately</td></tr>
+		  <tr><td><a href="plandefinition-azathioprine-poor-status.xml">Azathioprine Poor Status</a></td><td><a href="{{site.data.fhir.path}}/plandefinition.html">Plan Definition</a></td><td>Detects potentially poor metabolism for Azathioprine and notifies appropriately</td></tr>
+		  <tr><td><a href="library-abacavir-hypersensitivity-cds-logic.xml">Abacavir Hypersensitivity Library</a></td><td><a href="{{site.data.fhir.path}}/library.html">Library</a></td><td>The distributable library for Abacavir Sensitivity logic used by the Abacavir Sensitivity decision support rules.</td></tr>
+		  <tr><td><a href="library-azathioprine-myelotoxicity-cds-logic.xml">Abacavir Myelotoxicity Library</a></td><td><a href="{{site.data.fhir.path}}/library.html">Library</a></td><td>The distributable library for Azathioprine Myelotoxicity logic used by the Azathioprine Myelotoxicity decision support rules.</td></tr>
 		  <tr><td><a href="AbacavirOrderingPharmacogenomicSupport.cql">Abacavir Sensitivity CQL</a></td><td>CQL Source</td><td>For reference, the complete CQL content of the Abacavir Hypersensitivity Library</td></tr>
 		  <tr><td><a href="AzathioprineOrderingPharmacogenomicSupport.cql">Azathioprine Myelotoxicity CQL</a></td><td>CQL Source</td><td>For reference, the complete CQL content of the Azathioprine Myelotoxicity Library</td></tr>
 	  </tbody>
   </table>
   
-  <a name="references"/>
+  <a name="references"></a>
   <h3>References</h3>
   <p>
     Bell, Gillian C., Kristine R. Crews, Mark R. Wilkinson, Cyrine E. Haidar, J. Kevin Hicks, Donald K. Baker, Nancy M. Kornegay et al.
