@@ -21,11 +21,6 @@
      fhir:ImplementationGuide.package.name [ fhir:value "Abacavir and Azathioprine Sensitivity" ];
      fhir:ImplementationGuide.package.resource [
        fhir:index 0;
-       fhir:extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "Library-library-abacavir-hypersensitivity-cds-logic.html" ]
-       ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.name [ fhir:value "Library - Abacavir Ordering" ];
        fhir:ImplementationGuide.package.resource.description [ fhir:value "Logic to determine the whether or not an order of Abacavir is appropriate for a patient and alert the user if it is not." ];
@@ -35,11 +30,6 @@
        ]
      ], [
        fhir:index 1;
-       fhir:extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "Library-library-azathioprine-myelotoxicity-cds-logic.html" ]
-       ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.name [ fhir:value "Library - Azathioprine Ordering" ];
        fhir:ImplementationGuide.package.resource.description [ fhir:value "Logic to determine the whether or not the dosage of Azathioprine is appropriate for a patient and alert the user if it is not." ];

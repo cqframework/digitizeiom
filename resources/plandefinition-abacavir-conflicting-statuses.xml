@@ -1,5 +1,5 @@
 <PlanDefinition xmlns="http://hl7.org/fhir">
-	<id value="decisionsupportrule-abacavir-conflicting-statuses"/>
+	<id value="abacavir-conflicting-statuses"/>
 	<text>
 		<status value="generated"/>
 		<div xmlns="http://www.w3.org/1999/xhtml">Abacavir Hypersensitivity Intervention - Conflicting Statuses</div>

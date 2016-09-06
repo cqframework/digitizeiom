@@ -1,0 +1,273 @@
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- instance template base -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>DIGITizE IOM - FHIR v1.6.0</title>
+  
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="http://hl7.org/fhir"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
+   <div id="hl7-status">
+    <b>STU 2 Ballot</b> 
+   </div>
+
+   <div id="hl7-nav">
+     <a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a></div>
+  </div>
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7-fhir.github.io//index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="http://hl7-fhir.github.io/index.html">Home</a></li>
+              <li><a href="http://hl7-fhir.github.io/documentation.html">Documentation</a></li>
+              <li><a href="http://hl7-fhir.github.io/implementation.html">Implementation</a></li>
+              <li><a href="http://hl7-fhir.github.io/modules.html">Modules</a></li>
+              <li><a href="http://hl7-fhir.github.io/resourcelist.html">Resources</a></li>
+              <li><a href="http://hl7-fhir.github.io/profilelist.html">Profiles</a></li>
+              <li><a href="http://hl7-fhir.github.io/operations.html#defined">Operations</a></li>
+              <li><a href="http://hl7-fhir.github.io/servicelist.html">Services</a></li>
+						</ul>      
+      
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+  
+<h2>{title?}</h2>
+
+<pre class="json">
+{
+  "<a href="http://hl7-fhir.github.io/plandefinition.html">resourceType</a>" : "PlanDefinition",
+  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.id">id</a>" : "abacavir-conflicting-statuses",
+  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.text">text</a>" : {
+    "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;Abacavir Hypersensitivity Intervention - Conflicting Statuses&lt;/div&gt;"
+  },
+  "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition">contained</a>" : [
+    {
+      "<a href="http://hl7-fhir.github.io/activitydefinition.html">resourceType</a>" : "ActivityDefinition",
+      "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.id">id</a>" : "conflicting-test-results-alert",
+      "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.status">status</a>" : "active",
+      "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.category">category</a>" : "communication",
+      "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>" : [
+        {
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "sender",
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "CDS System"
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "recipient",
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Primary Provider"
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "payload.content",
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "'There are two conflicting results for this patient. Consult with a clinical pharmacist or laboratory professional to resolve the conflict.'"
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "status",
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "'proposed'"
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "encounter",
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Encounter"
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "scheduled",
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Now()"
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "reason",
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Conflicting Genotype Test Results"
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "requestedOn",
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Now()"
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "subject",
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Patient"
+        },
+        {
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "priority",
+          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Code 'routine' from DiagnosticPriority display 'Routine'"
+        }
+      }
+    }
+  },
+  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Identifier#Identifier.value">value</a>" : "abacavir-hypersensitivity-conflicting-statuses"
+    }
+  },
+  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.version">version</a>" : "1.0.0",
+  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.title">title</a>" : "Abacavir Hypersensitivity Intervention Conflicting Statuses",
+  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.status">status</a>" : "active",
+  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.description">description</a>" : "Abacavir hypersensitivity intervention to alert the user that conflicting statuses were found in the patient's genotype test results.",
+  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.publicationDate">publicationDate</a>" : "2016-04-01",
+  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.topic">topic</a>" : [
+    {
+      "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Abacavir Hypersensitivity - Conflicting Statuses"
+    }
+  },
+  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.library">library</a>" : [
+    {
+      "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "Library/library-abacavir-hypersensitivity-cds-logic"
+    }
+  },
+  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition">actionDefinition</a>" : [
+    {
+      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.title">title</a>" : "Patient Shows Conflicting Statuses in Genotype Test Results.",
+      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.textEquivalent">textEquivalent</a>" : "The Patient has conflicting statuses in their Genotype Test results.",
+      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.triggerDefinition">triggerDefinition</a>" : [
+        {
+          "<a href="http://hl7-fhir.github.io/datatypes.html#TriggerDefinition#TriggerDefinition.type">type</a>" : "data-added",
+          "<a href="http://hl7-fhir.github.io/datatypes.html#TriggerDefinition#TriggerDefinition.eventData">eventData</a>" : {
+            "<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.type">type</a>" : "MedicationOrder",
+            "<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter">codeFilter</a>" : [
+              {
+                "<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter.path">path</a>" : "code",
+                "<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter.valueCodeableConcept">valueCodeableConcept</a>" : [
+                  {
+                    "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.org/sct",
+                        "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "387005008"
+                      }
+                    },
+                    "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Abacavir (substance)"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.condition">condition</a>" : {
+        "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.condition.language">language</a>" : "text/cql",
+        "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.condition.expression">expression</a>" : "Should Notify User Of Conflicting Test Statuses"
+      },
+      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.participantType">participantType</a>" : [
+        "practitioner"
+      },
+      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.type">type</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "create"
+      },
+      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.activityDefinition">activityDefinition</a>" : {
+        "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "#conflicting-test-results-alert"
+      }
+    }
+  }
+}</pre>
+
+
+
+ </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+    <div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+        &copy; DIGITizE 2011+. Pharmacogenomic Ordering Support (v1.5.0-9257) generated on Tue, Sep 6, 2016 17:08-0600. <a href="qa.html">QA Page</a>
+        <br/>
+        <span style="color: #FFFF77">
+        Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img style="text-align: baseline" src="external.png"/></a> |
+               <a style="color: #81BEF7" href="http://hl7.org/fhir/us/digitizeiom/history.html">Version History</a> |
+               <a style="color: #81BEF7" href="index.html">Table of Contents</a> |
+               <a style="color: #81BEF7" rel="license" href="http://hl7-fhir.github.io/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+               <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="external.png"/></a>
+        </span>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="dist/js/bootstrap.min.js"> </script>
+<script src="assets/js/respond.min.js"> </script>
+
+<script src="assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>
+
+

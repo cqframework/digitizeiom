@@ -13,9 +13,6 @@
   <package>
     <name value="Abacavir and Azathioprine Sensitivity"/>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="Library-library-abacavir-hypersensitivity-cds-logic.html"/>
-      </extension>
       <example value="true"/>
       <name value="Library - Abacavir Ordering"/>
       <description value="Logic to determine the whether or not an order of Abacavir is appropriate for a patient and alert the user if it is not."/>
@@ -24,9 +21,6 @@
       </sourceReference>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="Library-library-azathioprine-myelotoxicity-cds-logic.html"/>
-      </extension>
       <example value="true"/>
       <name value="Library - Azathioprine Ordering"/>
       <description value="Logic to determine the whether or not the dosage of Azathioprine is appropriate for a patient and alert the user if it is not."/>

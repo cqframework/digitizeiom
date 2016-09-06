@@ -1,6 +1,6 @@
 <!-- Should exclude CDS from identifiers as this is harmonized logic -->
 <Library xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/library.xsd">
-	<id value="library-abacavir-hypersensitivity-cds-logic"/>
+	<id value="abacavir-hypersensitivity-cds-logic"/>
 	<text>
 		<status value="generated"/>
 		<div xmlns="http://www.w3.org/1999/xhtml">Abacavir Hypersensitivity CDS Logic</div>

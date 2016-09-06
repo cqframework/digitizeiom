@@ -1,0 +1,182 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "azathioprine-need-test",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Azathioprine Myelotoxicity Intervention - Need Test</div>"
+  },
+  "contained": [
+    {
+      "resourceType": "ActivityDefinition",
+      "id": "create-diagnostic-order-for-tpmt-test",
+      "status": "active",
+      "category": "diagnostic",
+      "dynamicValue": [
+        {
+          "path": "stage",
+          "expression": "Code 'proposal' from RequestStage display 'Proposal'"
+        },
+        {
+          "path": "code",
+          "expression": "Genotype Results for TPMT"
+        },
+        {
+          "path": "subject",
+          "expression": "Patient"
+        },
+        {
+          "path": "occurrenceDateTime",
+          "expression": "Now()"
+        },
+        {
+          "path": "requester",
+          "expression": "CDS System"
+        },
+        {
+          "path": "reason",
+          "expression": "'The patient is being prescribed Abacavir without appropriate genotype testing for Abacavir sensitivity.'"
+        }
+      ]
+    },
+    {
+      "resourceType": "ActivityDefinition",
+      "id": "missing-tpmt-test-alert",
+      "status": "active",
+      "category": "communication",
+      "dynamicValue": [
+        {
+          "path": "sender",
+          "expression": "CDS System"
+        },
+        {
+          "path": "recipient",
+          "expression": "Primary Provider"
+        },
+        {
+          "path": "payload.content",
+          "expression": "'An order for Abacavir has been made for the patient without proper genotype screening'"
+        },
+        {
+          "path": "payload.content",
+          "expression": "'TPMT test is recommended before using a thiopurine (mercaptopurine, thioguanine, and azathioprine).         A TPMT genotype test does not appear to have been ordered for this patient. An unsigned order has been created to perform         this test, {{click here to sign the order}}'"
+        },
+        {
+          "path": "status",
+          "expression": "'proposed'"
+        },
+        {
+          "path": "encounter",
+          "expression": "Encounter"
+        },
+        {
+          "path": "scheduled",
+          "expression": "Now()"
+        },
+        {
+          "path": "reason",
+          "expression": "Missing TPMT Test"
+        },
+        {
+          "path": "requestedOn",
+          "expression": "Now()"
+        },
+        {
+          "path": "subject",
+          "expression": "Patient"
+        },
+        {
+          "path": "priority",
+          "expression": "Code 'urgent' from DiagnosticPriority display 'Urgent'"
+        }
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "use": "official",
+      "value": "azathioprine-myelotoxicity-need-test"
+    }
+  ],
+  "version": "1.0.0",
+  "title": "Azathioprine Myelotoxicity Need Test",
+  "status": "active",
+  "description": "Azathioprine myelotoxicity intervention to alert the user that a TPMT genotype test should be administered.",
+  "publicationDate": "2016-04-01",
+  "topic": [
+    {
+      "text": "Azathioprine Myelotoxicity - Need Test"
+    }
+  ],
+  "library": [
+    {
+      "reference": "Library/library-azathioprine-myelotoxicity-cds-logic"
+    }
+  ],
+  "actionDefinition": [
+    {
+      "title": "Patient should be administered a TPMT Genotype Test.",
+      "triggerDefinition": [
+        {
+          "type": "data-added",
+          "eventData": {
+            "type": "MedicationOrder",
+            "codeFilter": [
+              {
+                "path": "code",
+                "valueCodeableConcept": [
+                  {
+                    "coding": [
+                      {
+                        "system": "http://snomed.org/sct",
+                        "code": "372574004"
+                      }
+                    ],
+                    "text": "Azathioprine (substance)"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "condition": {
+        "language": "text/cql",
+        "expression": "Needs TPMT Test"
+      },
+      "actionDefinition": [
+        {
+          "title": "Create the TPMT Genotype Test.",
+          "textEquivalent": "Administer a TPMT Genotype Test.",
+          "participantType": [
+            "practitioner"
+          ],
+          "type": {
+            "code": "create"
+          },
+          "dynamicValue": [
+            {
+              "path": "/",
+              "expression": "create-diagnostic-order-for-tpmt-genotype-test"
+            }
+          ]
+        },
+        {
+          "title": "Notify the provider to sign the order.",
+          "textEquivalent": "A TPMT Genotype Test is recommended, please authorize or reject the order.",
+          "participantType": [
+            "practitioner"
+          ],
+          "type": {
+            "code": "create"
+          },
+          "dynamicValue": [
+            {
+              "path": "/",
+              "expression": "missing-tpmt-test-alert"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+<pre class="xml">
+
+&lt;<a href="http://hl7-fhir.github.io/library.html#Library">Library</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.id">id</a> <a href="http://hl7-fhir.github.io/datatypes.html#id">value</a>=&quot;azathioprine-myelotoxicity-cds-logic&quot;/&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.text">text</a>&gt;
+    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;Azathioprine Myelotoxicity CDS Logic&lt;/div&gt;
+  &lt;/text&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;official&quot;/&gt;
+    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Azathioprine_Myelotoxicity_CDS_Logic&quot;/&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.version">version</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;1.0.0&quot;/&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.title">title</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Azathioprine Myelotoxicity CDS Logic&quot;/&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.type">type</a>&gt;
+    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;logic-library&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/type&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.status">status</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.experimental">experimental</a> <a href="http://hl7-fhir.github.io/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.description">description</a>
+               <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Decision support logic for improving the dosage accuracy of Azathioprine based on a Patient&#39;s TPMT metabolizer&quot;/&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.publicationDate">publicationDate</a> <a href="http://hl7-fhir.github.io/datatypes.html#date">value</a>=&quot;2016-03-14&quot;/&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.topic">topic</a>&gt;
+    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Azathioprine Myelotoxicity&quot;/&gt;
+  &lt;/topic&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.relatedResource">relatedResource</a>&gt;
+    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#RelatedResource#RelatedResource.type">type</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
+    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#RelatedResource#RelatedResource.resource">resource</a>&gt;
+      &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Library/library-quick-model-definition&quot;/&gt;
+    &lt;/resource&gt;
+  &lt;/relatedResource&gt;
+&lt;!-- valueSet&gt;
+    &lt;name value=&quot;snomed-CT&quot;/&gt;
+    &lt;identifier value=&quot;2.16.840.1.113883.6.96&quot;/&gt;
+  &lt;/valueSet --&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.dataRequirement">dataRequirement</a>&gt;
+    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;Observation&quot;/&gt;
+    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter">codeFilter</a>&gt;
+      &lt;<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;code&quot;/&gt;
+      &lt;<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter.valueSet[x]">valueSetString</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;TPMT Results&quot;/&gt;
+    &lt;/codeFilter&gt;
+  &lt;/dataRequirement&gt;
+  &lt;<a href="http://hl7-fhir.github.io/library.html#Library.content">content</a>&gt;
+    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Attachment#Attachment.contentType">contentType</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;text/cql&quot;/&gt;
+    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Attachment#Attachment.url">url</a>
+         <a href="http://hl7-fhir.github.io/datatypes.html#uri">value</a>=&quot;http://cqlrepository.org/AzathioprineOrderingPharmacogenomicSupport.cql&quot;/&gt;
+  &lt;/content&gt;
+&lt;/Library&gt;</pre>
