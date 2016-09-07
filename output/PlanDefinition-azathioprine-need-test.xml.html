@@ -41,7 +41,7 @@
   <div class="container">  <!-- container -->
    <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/> </a>
    <div id="hl7-status">
-    <b>STU 2 Ballot</b> 
+    <b>STU 3 Ballot</b> 
    </div>
 
    <div id="hl7-nav">
@@ -66,17 +66,17 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="http://hl7-fhir.github.io//index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/2016Sep//index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
-              <li><a href="http://hl7-fhir.github.io/index.html">Home</a></li>
-              <li><a href="http://hl7-fhir.github.io/documentation.html">Documentation</a></li>
-              <li><a href="http://hl7-fhir.github.io/implementation.html">Implementation</a></li>
-              <li><a href="http://hl7-fhir.github.io/modules.html">Modules</a></li>
-              <li><a href="http://hl7-fhir.github.io/resourcelist.html">Resources</a></li>
-              <li><a href="http://hl7-fhir.github.io/profilelist.html">Profiles</a></li>
-              <li><a href="http://hl7-fhir.github.io/operations.html#defined">Operations</a></li>
-              <li><a href="http://hl7-fhir.github.io/servicelist.html">Services</a></li>
+              <li><a href="http://hl7.org/fhir/2016Sep/index.html">Home</a></li>
+              <li><a href="http://hl7.org/fhir/2016Sep/documentation.html">Documentation</a></li>
+              <li><a href="http://hl7.org/fhir/2016Sep/implementation.html">Implementation</a></li>
+              <li><a href="http://hl7.org/fhir/2016Sep/modules.html">Modules</a></li>
+              <li><a href="http://hl7.org/fhir/2016Sep/resourcelist.html">Resources</a></li>
+              <li><a href="http://hl7.org/fhir/2016Sep/profilelist.html">Profiles</a></li>
+              <li><a href="http://hl7.org/fhir/2016Sep/operations.html#defined">Operations</a></li>
+              <li><a href="http://hl7.org/fhir/2016Sep/servicelist.html">Services</a></li>
 						</ul>      
       
      </div>  <!-- /.nav-collapse -->
@@ -97,160 +97,160 @@
 
 <pre class="xml">
 
-&lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition">PlanDefinition</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.id">id</a> <a href="http://hl7-fhir.github.io/datatypes.html#id">value</a>=&quot;azathioprine-need-test&quot;/&gt;
-  &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.text">text</a>&gt;
-    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+&lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition">PlanDefinition</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.id">id</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#id">value</a>=&quot;azathioprine-need-test&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;Azathioprine Myelotoxicity Intervention - Need Test&lt;/div&gt;
   &lt;/text&gt;
-  &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition">contained</a>&gt;
-    &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition">ActivityDefinition</a>&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.id">id</a> <a href="http://hl7-fhir.github.io/datatypes.html#id">value</a>=&quot;create-diagnostic-order-for-tpmt-test&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.status">status</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.category">category</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;diagnostic&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;stage&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>
-                    <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Code &#39;proposal&#39; from RequestStage display &#39;Proposal&#39;&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition">contained</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition">ActivityDefinition</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.id">id</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#id">value</a>=&quot;create-diagnostic-order-for-tpmt-test&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.status">status</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.category">category</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;diagnostic&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;stage&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>
+                    <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Code &#39;proposal&#39; from RequestStage display &#39;Proposal&#39;&quot;/&gt;
       &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;code&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Genotype Results for TPMT&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;code&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Genotype Results for TPMT&quot;/&gt;
       &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;subject&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Patient&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;subject&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Patient&quot;/&gt;
       &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;occurrenceDateTime&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Now()&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;occurrenceDateTime&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Now()&quot;/&gt;
       &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;requester&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;CDS System&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;requester&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;CDS System&quot;/&gt;
       &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;reason&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>
-                    <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;&#39;The patient is being prescribed Abacavir without appropriate genotype testing for Abacavir sensitivity.&#39;&quot;/&gt;
-      &lt;/dynamicValue&gt;
-    &lt;/ActivityDefinition&gt;
-  &lt;/contained&gt;
-  &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition">contained</a>&gt;
-    &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition">ActivityDefinition</a>&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.id">id</a> <a href="http://hl7-fhir.github.io/datatypes.html#id">value</a>=&quot;missing-tpmt-test-alert&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.status">status</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.category">category</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;communication&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;sender&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;CDS System&quot;/&gt;
-      &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;recipient&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Primary Provider&quot;/&gt;
-      &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;payload.content&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>
-                    <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;&#39;An order for Abacavir has been made for the patient without proper genotype screening&#39;&quot;/&gt;
-      &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;payload.content&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>
-                    <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;&#39;TPMT test is recommended before using a thiopurine (mercaptopurine, thioguanine, and azathioprine).         A TPMT genotype test does not appear to have been ordered for this patient. An unsigned order has been created to perform         this test, &#39;&quot;/&gt;
-      &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;status&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;&#39;proposed&#39;&quot;/&gt;
-      &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;encounter&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Encounter&quot;/&gt;
-      &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;scheduled&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Now()&quot;/&gt;
-      &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;reason&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Missing TPMT Test&quot;/&gt;
-      &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;requestedOn&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Now()&quot;/&gt;
-      &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;subject&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Patient&quot;/&gt;
-      &lt;/dynamicValue&gt;
-      &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;priority&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>
-                    <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Code &#39;urgent&#39; from DiagnosticPriority display &#39;Urgent&#39;&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;reason&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>
+                    <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;&#39;The patient is being prescribed Abacavir without appropriate genotype testing for Abacavir sensitivity.&#39;&quot;/&gt;
       &lt;/dynamicValue&gt;
     &lt;/ActivityDefinition&gt;
   &lt;/contained&gt;
-  &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;official&quot;/&gt;
-    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;azathioprine-myelotoxicity-need-test&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition">contained</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition">ActivityDefinition</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.id">id</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#id">value</a>=&quot;missing-tpmt-test-alert&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.status">status</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.category">category</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;communication&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;sender&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;CDS System&quot;/&gt;
+      &lt;/dynamicValue&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;recipient&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Primary Provider&quot;/&gt;
+      &lt;/dynamicValue&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;payload.content&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>
+                    <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;&#39;An order for Abacavir has been made for the patient without proper genotype screening&#39;&quot;/&gt;
+      &lt;/dynamicValue&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;payload.content&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>
+                    <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;&#39;TPMT test is recommended before using a thiopurine (mercaptopurine, thioguanine, and azathioprine).         A TPMT genotype test does not appear to have been ordered for this patient. An unsigned order has been created to perform         this test, &#39;&quot;/&gt;
+      &lt;/dynamicValue&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;status&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;&#39;proposed&#39;&quot;/&gt;
+      &lt;/dynamicValue&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;encounter&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Encounter&quot;/&gt;
+      &lt;/dynamicValue&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;scheduled&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Now()&quot;/&gt;
+      &lt;/dynamicValue&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;reason&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Missing TPMT Test&quot;/&gt;
+      &lt;/dynamicValue&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;requestedOn&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Now()&quot;/&gt;
+      &lt;/dynamicValue&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;subject&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Patient&quot;/&gt;
+      &lt;/dynamicValue&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;priority&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>
+                    <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Code &#39;urgent&#39; from DiagnosticPriority display &#39;Urgent&#39;&quot;/&gt;
+      &lt;/dynamicValue&gt;
+    &lt;/ActivityDefinition&gt;
+  &lt;/contained&gt;
+  &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;official&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;azathioprine-myelotoxicity-need-test&quot;/&gt;
   &lt;/identifier&gt;
-  &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.version">version</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;1.0.0&quot;/&gt;
-  &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.title">title</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Azathioprine Myelotoxicity Need Test&quot;/&gt;
-  &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.status">status</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.description">description</a>
-               <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Azathioprine myelotoxicity intervention to alert the user that a TPMT genotype test should be administered.&quot;/&gt;
-  &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.publicationDate">publicationDate</a> <a href="http://hl7-fhir.github.io/datatypes.html#date">value</a>=&quot;2016-04-01&quot;/&gt;
-  &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.topic">topic</a>&gt;
-    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Azathioprine Myelotoxicity - Need Test&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.version">version</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;1.0.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.title">title</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Azathioprine Myelotoxicity Need Test&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.status">status</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.description">description</a>
+               <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Azathioprine myelotoxicity intervention to alert the user that a TPMT genotype test should be administered.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.publicationDate">publicationDate</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#date">value</a>=&quot;2016-04-01&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.topic">topic</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Azathioprine Myelotoxicity - Need Test&quot;/&gt;
   &lt;/topic&gt;
-  &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.library">library</a>&gt;
-    &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Library/library-azathioprine-myelotoxicity-cds-logic&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.library">library</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Library/library-azathioprine-myelotoxicity-cds-logic&quot;/&gt;
   &lt;/library&gt;
-  &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition">actionDefinition</a>&gt;
-    &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.title">title</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Patient should be administered a TPMT Genotype Test.&quot;/&gt;
-    &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.triggerDefinition">triggerDefinition</a>&gt;
-      &lt;<a href="http://hl7-fhir.github.io/datatypes.html#TriggerDefinition#TriggerDefinition.type">type</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;data-added&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/datatypes.html#TriggerDefinition#TriggerDefinition.eventData">eventData</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;MedicationOrder&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter">codeFilter</a>&gt;
-          &lt;<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;code&quot;/&gt;
-          &lt;<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter.valueCodeableConcept">valueCodeableConcept</a>&gt;
-            &lt;<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-              &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7-fhir.github.io/datatypes.html#uri">value</a>=&quot;http://snomed.org/sct&quot;/&gt;
-              &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;372574004&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition">actionDefinition</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.title">title</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Patient should be administered a TPMT Genotype Test.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.triggerDefinition">triggerDefinition</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#TriggerDefinition#TriggerDefinition.type">type</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;data-added&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#TriggerDefinition#TriggerDefinition.eventData">eventData</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;MedicationOrder&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#DataRequirement#DataRequirement.codeFilter">codeFilter</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#DataRequirement#DataRequirement.codeFilter.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;code&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#DataRequirement#DataRequirement.codeFilter.valueCodeableConcept">valueCodeableConcept</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#uri">value</a>=&quot;http://snomed.org/sct&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;372574004&quot;/&gt;
             &lt;/coding&gt;
-            &lt;<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Azathioprine (substance)&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Azathioprine (substance)&quot;/&gt;
           &lt;/valueCodeableConcept&gt;
         &lt;/codeFilter&gt;
       &lt;/eventData&gt;
     &lt;/triggerDefinition&gt;
-    &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.condition">condition</a>&gt;
-      &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.condition.language">language</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;text/cql&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.condition.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Needs TPMT Test&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.condition">condition</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.condition.language">language</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;text/cql&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.condition.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Needs TPMT Test&quot;/&gt;
     &lt;/condition&gt;
-    &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.actionDefinition">actionDefinition</a>&gt;
-      &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.title">title</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Create the TPMT Genotype Test.&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.textEquivalent">textEquivalent</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Administer a TPMT Genotype Test.&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.participantType">participantType</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;practitioner&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.type">type</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;create&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.actionDefinition">actionDefinition</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.title">title</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Create the TPMT Genotype Test.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.textEquivalent">textEquivalent</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Administer a TPMT Genotype Test.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.participantType">participantType</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;practitioner&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;create&quot;/&gt;
       &lt;/type&gt;
-      &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;/&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;create-diagnostic-order-for-tpmt-genotype-test&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;/&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;create-diagnostic-order-for-tpmt-genotype-test&quot;/&gt;
       &lt;/dynamicValue&gt;
     &lt;/actionDefinition&gt;
-    &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.actionDefinition">actionDefinition</a>&gt;
-      &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.title">title</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;Notify the provider to sign the order.&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.textEquivalent">textEquivalent</a>
-                      <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;A TPMT Genotype Test is recommended, please authorize or reject the order.&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.participantType">participantType</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;practitioner&quot;/&gt;
-      &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.type">type</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7-fhir.github.io/datatypes.html#code">value</a>=&quot;create&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.actionDefinition">actionDefinition</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.title">title</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;Notify the provider to sign the order.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.textEquivalent">textEquivalent</a>
+                      <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;A TPMT Genotype Test is recommended, please authorize or reject the order.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.participantType">participantType</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;practitioner&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#code">value</a>=&quot;create&quot;/&gt;
       &lt;/type&gt;
-      &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.dynamicValue">dynamicValue</a>&gt;
-        &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.dynamicValue.path">path</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;/&quot;/&gt;
-        &lt;<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.dynamicValue.expression">expression</a> <a href="http://hl7-fhir.github.io/datatypes.html#string">value</a>=&quot;missing-tpmt-test-alert&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.dynamicValue">dynamicValue</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.dynamicValue.path">path</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;/&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.dynamicValue.expression">expression</a> <a href="http://hl7.org/fhir/2016Sep/datatypes.html#string">value</a>=&quot;missing-tpmt-test-alert&quot;/&gt;
       &lt;/dynamicValue&gt;
     &lt;/actionDefinition&gt;
   &lt;/actionDefinition&gt;
@@ -268,13 +268,13 @@
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-        &copy; DIGITizE 2011+. Pharmacogenomic Ordering Support (v1.5.0-9257) generated on Tue, Sep 6, 2016 17:08-0600. <a href="qa.html">QA Page</a>
+        &copy; DIGITizE 2011+. Pharmacogenomic Ordering Support (v1.5.0-9257) generated on Wed, Sep 7, 2016 11:22-0600. <a href="qa.html">QA Page</a>
         <br/>
         <span style="color: #FFFF77">
         Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img style="text-align: baseline" src="external.png"/></a> |
                <a style="color: #81BEF7" href="http://hl7.org/fhir/us/digitizeiom/history.html">Version History</a> |
                <a style="color: #81BEF7" href="index.html">Table of Contents</a> |
-               <a style="color: #81BEF7" rel="license" href="http://hl7-fhir.github.io/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+               <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/2016Sep/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
                <a style="color: #81BEF7" target="_blank" href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change <img style="text-align: baseline" src="external.png"/></a>
         </span>
         </p>

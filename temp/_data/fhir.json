@@ -1,5 +1,5 @@
 ﻿{
-  "path": "http://hl7-fhir.github.io/",
+  "path": "http://hl7.org/fhir/2016Sep/",
   "canonical": "http://hl7.org/fhir/digitizeiom",
   "igId": "digitizeiom",
   "igName": "DIGITizE Pharmacogenomic Ordering Support IOM",
@@ -8,6 +8,6 @@
   "revision": "9257",
   "versionFull": "1.5.0-9257",
   "totalFiles": 10,
-  "processedFiles": 73,
-  "genDate": "Tue, Sep 6, 2016 17:08-0600"
+  "processedFiles": 78,
+  "genDate": "Wed, Sep 7, 2016 11:22-0600"
 }

@@ -6,104 +6,104 @@
 <body>
 <pre class="json">
 {
-  "<a href="http://hl7-fhir.github.io/plandefinition.html">resourceType</a>" : "PlanDefinition",
-  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.id">id</a>" : "abacavir-hypersensitivity-positive",
-  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.text">text</a>" : {
-    "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7-fhir.github.io/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;Abacavir Hypersensitivity Intervention - Positive&lt;/div&gt;"
+  "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html">resourceType</a>" : "PlanDefinition",
+  "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.id">id</a>" : "abacavir-hypersensitivity-positive",
+  "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;Abacavir Hypersensitivity Intervention - Positive&lt;/div&gt;"
   },
-  "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition">contained</a>" : [
+  "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition">contained</a>" : [
     {
-      "<a href="http://hl7-fhir.github.io/activitydefinition.html">resourceType</a>" : "ActivityDefinition",
-      "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.id">id</a>" : "hypersensitivity-to-abacavir-alert",
-      "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.status">status</a>" : "active",
-      "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.category">category</a>" : "communication",
-      "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>" : [
+      "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html">resourceType</a>" : "ActivityDefinition",
+      "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.id">id</a>" : "hypersensitivity-to-abacavir-alert",
+      "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.status">status</a>" : "active",
+      "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.category">category</a>" : "communication",
+      "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue">dynamicValue</a>" : [
         {
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "sender",
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "CDS System"
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "sender",
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "CDS System"
         },
         {
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "recipient",
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Primary Provider"
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "recipient",
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Primary Provider"
         },
         {
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "payload.content",
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "'The HLA-B*57:01 allele is present in this patient. This allele is associated with high risk of severe         hypersensitivity to abacavir. HLA-B*57:01 positive patients should NOT be prescribed abacavir. Please         choose an alternate antiretroviral. For more information, please consult a {{recommended clinical         professional for consultation, for example some institutions might direct to a clinical pharmacist}}.'"
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "payload.content",
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "'The HLA-B*57:01 allele is present in this patient. This allele is associated with high risk of severe         hypersensitivity to abacavir. HLA-B*57:01 positive patients should NOT be prescribed abacavir. Please         choose an alternate antiretroviral. For more information, please consult a {{recommended clinical         professional for consultation, for example some institutions might direct to a clinical pharmacist}}.'"
         },
         {
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "status",
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "'proposed'"
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "status",
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "'proposed'"
         },
         {
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "encounter",
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Encounter"
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "encounter",
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Encounter"
         },
         {
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "scheduled",
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Now()"
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "scheduled",
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Now()"
         },
         {
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "reason",
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Genotype Test Results Positive For HLA-B*57:01 Allele"
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "reason",
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Genotype Test Results Positive For HLA-B*57:01 Allele"
         },
         {
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "requestedOn",
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Now()"
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "requestedOn",
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Now()"
         },
         {
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "subject",
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Patient"
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "subject",
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Patient"
         },
         {
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "priority",
-          "<a href="http://hl7-fhir.github.io/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Code 'urgent' from DiagnosticPriority display 'Urgent'"
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.path">path</a>" : "priority",
+          "<a href="http://hl7.org/fhir/2016Sep/activitydefinition.html#ActivityDefinition.dynamicValue.expression">expression</a>" : "Code 'urgent' from DiagnosticPriority display 'Urgent'"
         }
       }
     }
   },
-  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.identifier">identifier</a>" : [
+  "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.identifier">identifier</a>" : [
     {
-      "<a href="http://hl7-fhir.github.io/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
-      "<a href="http://hl7-fhir.github.io/datatypes.html#Identifier#Identifier.value">value</a>" : "abacavir-hypersensitivity-positive"
+      "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+      "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Identifier#Identifier.value">value</a>" : "abacavir-hypersensitivity-positive"
     }
   },
-  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.version">version</a>" : "1.0.0",
-  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.title">title</a>" : "Abacavir Hypersensitivity Positive",
-  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.status">status</a>" : "active",
-  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.description">description</a>" : "Abacavir hypersensitivity intervention to alert the user that the patient's genotype test results indicate a hypersensitivity to Abacavir.",
-  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.publicationDate">publicationDate</a>" : "2016-04-01",
-  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.topic">topic</a>" : [
+  "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.version">version</a>" : "1.0.0",
+  "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.title">title</a>" : "Abacavir Hypersensitivity Positive",
+  "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.description">description</a>" : "Abacavir hypersensitivity intervention to alert the user that the patient's genotype test results indicate a hypersensitivity to Abacavir.",
+  "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.publicationDate">publicationDate</a>" : "2016-04-01",
+  "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.topic">topic</a>" : [
     {
-      "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Abacavir Hypersensitivity - Positive Finding"
+      "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Abacavir Hypersensitivity - Positive Finding"
     }
   },
-  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.library">library</a>" : [
+  "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.library">library</a>" : [
     {
-      "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "Library/library-abacavir-hypersensitivity-cds-logic"
+      "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Reference#Reference.reference">reference</a>" : "Library/library-abacavir-hypersensitivity-cds-logic"
     }
   },
-  "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition">actionDefinition</a>" : [
+  "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition">actionDefinition</a>" : [
     {
-      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.title">title</a>" : "Patient Shows Hypersensitivity to Abacavir in Genotype Test Results.",
-      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.textEquivalent">textEquivalent</a>" : "The HLA-B*57:01 allele is present in the Patient's Genotype Test results.",
-      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.triggerDefinition">triggerDefinition</a>" : [
+      "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.title">title</a>" : "Patient Shows Hypersensitivity to Abacavir in Genotype Test Results.",
+      "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.textEquivalent">textEquivalent</a>" : "The HLA-B*57:01 allele is present in the Patient's Genotype Test results.",
+      "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.triggerDefinition">triggerDefinition</a>" : [
         {
-          "<a href="http://hl7-fhir.github.io/datatypes.html#TriggerDefinition#TriggerDefinition.type">type</a>" : "data-added",
-          "<a href="http://hl7-fhir.github.io/datatypes.html#TriggerDefinition#TriggerDefinition.eventData">eventData</a>" : {
-            "<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.type">type</a>" : "MedicationOrder",
-            "<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter">codeFilter</a>" : [
+          "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#TriggerDefinition#TriggerDefinition.type">type</a>" : "data-added",
+          "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#TriggerDefinition#TriggerDefinition.eventData">eventData</a>" : {
+            "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#DataRequirement#DataRequirement.type">type</a>" : "MedicationOrder",
+            "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#DataRequirement#DataRequirement.codeFilter">codeFilter</a>" : [
               {
-                "<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter.path">path</a>" : "code",
-                "<a href="http://hl7-fhir.github.io/datatypes.html#DataRequirement#DataRequirement.codeFilter.valueCodeableConcept">valueCodeableConcept</a>" : [
+                "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#DataRequirement#DataRequirement.codeFilter.path">path</a>" : "code",
+                "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#DataRequirement#DataRequirement.codeFilter.valueCodeableConcept">valueCodeableConcept</a>" : [
                   {
-                    "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                    "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
                       {
-                        "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.org/sct",
-                        "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "387005008"
+                        "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.org/sct",
+                        "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Coding#Coding.code">code</a>" : "387005008"
                       }
                     },
-                    "<a href="http://hl7-fhir.github.io/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Abacavir (substance)"
+                    "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Abacavir (substance)"
                   }
                 }
               }
@@ -111,18 +111,18 @@
           }
         }
       },
-      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.condition">condition</a>" : {
-        "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.condition.language">language</a>" : "text/cql",
-        "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.condition.expression">expression</a>" : "Should Notify User of Patient's Hypersensitivity"
+      "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.condition">condition</a>" : {
+        "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.condition.language">language</a>" : "text/cql",
+        "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.condition.expression">expression</a>" : "Should Notify User of Patient's Hypersensitivity"
       },
-      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.participantType">participantType</a>" : [
+      "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.participantType">participantType</a>" : [
         "practitioner"
       },
-      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.type">type</a>" : {
-        "<a href="http://hl7-fhir.github.io/datatypes.html#Coding#Coding.code">code</a>" : "create"
+      "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.type">type</a>" : {
+        "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Coding#Coding.code">code</a>" : "create"
       },
-      "<a href="http://hl7-fhir.github.io/plandefinition.html#PlanDefinition.actionDefinition.activityDefinition">activityDefinition</a>" : {
-        "<a href="http://hl7-fhir.github.io/datatypes.html#Reference#Reference.reference">reference</a>" : "#hypersensitivity-to-abacavir-alert"
+      "<a href="http://hl7.org/fhir/2016Sep/plandefinition.html#PlanDefinition.actionDefinition.activityDefinition">activityDefinition</a>" : {
+        "<a href="http://hl7.org/fhir/2016Sep/datatypes.html#Reference#Reference.reference">reference</a>" : "#hypersensitivity-to-abacavir-alert"
       }
     }
   }
