@@ -114,10 +114,9 @@
       <ul class="nav navbar-nav">
               <li><a href="http://hl7.org/fhir/2016Sep/index.html">Home</a></li>
               <li><a href="http://hl7.org/fhir/2016Sep/documentation.html">Documentation</a></li>
-              <li><a href="http://hl7.org/fhir/2016Sep/implementation.html">Implementation</a></li>
-              <li><a href="http://hl7.org/fhir/2016Sep/modules.html">Modules</a></li>
               <li><a href="http://hl7.org/fhir/2016Sep/resourcelist.html">Resources</a></li>
               <li><a href="http://hl7.org/fhir/2016Sep/profilelist.html">Profiles</a></li>
+              <li><a href="http://hl7.org/fhir/2016Sep/extensibility-registry.html">Extensions</a></li>
               <li><a href="http://hl7.org/fhir/2016Sep/operations.html#defined">Operations</a></li>
               <li><a href="http://hl7.org/fhir/2016Sep/servicelist.html">Services</a></li>
 						</ul>      
@@ -493,7 +492,7 @@
             <span class="cql-keyword">not exists </span><span class="cql-generic">(</span><a href="#ObservedAllele"><span class="cql-interface" style="text-decoration: underline">"Observed HLA-B*57:01 Allele"</span></a><span class="cql-generic">)</span>
           </div>
         </div>
-        <a href="plandefinition-abacavir-need-test.xml.html">Plan Definition</a>
+        <a href="PlanDefinition-abacavir-need-test.xml.html">Plan Definition</a>
       </li>
       <li>
         There are two or more conflicting statuses of the observed HLA-B*57:01 allele from a patient's genotype test results
@@ -507,7 +506,7 @@
             </div>
           </div>
         </div>
-        <a href="plandefinition-abacavir-conflicting-statuses.xml.html">Plan Definition</a>
+        <a href="PlanDefinition-abacavir-conflicting-statuses.xml.html">Plan Definition</a>
       </li>
       <li>
         There is a positive status in the patient's genotype test indicating a hypersensitivity to Abacavir
@@ -521,7 +520,7 @@
             </div>
           </div>
         </div>
-        <a href="plandefinition-abacavir-hypersensitivity-positive.xml.html">Plan Definition</a>
+        <a href="PlanDefinition-abacavir-hypersensitivity-positive.xml.html">Plan Definition</a>
       </li>
     </ul>
   </p>
@@ -539,7 +538,7 @@
             <span class="cql-keyword">not exists </span><span class="cql-generic">(</span><a href="#Results"><span class="cql-interface" style="text-decoration:underline;">"TPMT Results"</span></a><span class="cql-generic">)</span>
           </div>
         </div>
-        <a href="plandefinition-azathioprine-need-test.xml.html">Plan Definition</a>
+        <a href="PlanDefinition-azathioprine-need-test.xml.html">Plan Definition</a>
       </li>
       <li>
         There are two or more conflicting TPMT results for a patient.
@@ -556,7 +555,7 @@
             </div>
           </div>
         </div>
-        <a href="plandefinition-azathioprine-conflicting-statuses.xml.html">Plan Definition</a>
+        <a href="PlanDefinition-azathioprine-conflicting-statuses.xml.html">Plan Definition</a>
       </li>
       <li>
         The patient is at increased risk of myelotoxicity due to intermediate status on TPMT genotype test
@@ -570,7 +569,7 @@
             </div>
           </div>
         </div>
-        <a href="plandefinition-azathioprine-lower-dosage.xml.html">Plan Definition</a>
+        <a href="PlanDefinition-azathioprine-lower-dosage.xml.html">Plan Definition</a>
       </li>
       <li>
         The patient is at very high risk of myelotoxicity due to poor status found in the latest TPMT genotype test
@@ -597,7 +596,7 @@
             </div>
           </div>
         </div>
-        <a href="plandefinition-azathioprine-poor-status.xml.html">Plan Definition</a>
+        <a href="PlanDefinition-azathioprine-poor-status.xml.html">Plan Definition</a>
       </li>
     </ul>
   </p>
@@ -612,15 +611,15 @@
 		  <tr><th>Resource</th><th>Type</th><th>Description</th></tr>
 	  </thead>
 	  <tbody>
-		  <tr><td><a href="plandefinition-abacavir-conflicting-statuses.html">Abacavir Conflicting Statuses</a></td><td><a href="http://hl7.org/fhir/2016Sep//plandefinition.html">Plan Definition</a></td><td>Detects conflicting statuses for Abacavir Sensitivity tests and notifies appropriately</td></tr>
-		  <tr><td><a href="plandefinition-abacavir-hypersensitivity-positive.html">Abacavir Hypersensitivity</a></td><td><a href="http://hl7.org/fhir/2016Sep//plandefinition.html">Plan Definition</a></td><td>Detects positive status for Abacavir Sensitivity and notifies appropriately</td></tr>
-		  <tr><td><a href="plandefinition-abacavir-need-test.html">Abacavir Sensitivity Test Recommended</a></td><td><a href="http://hl7.org/fhir/2016Sep//plandefinition.html">Plan Definition</a></td><td>Detects no results for Abacavir Sensitivity and notifies appropriately</td></tr>
-		  <tr><td><a href="plandefinition-azathioprine-conflicting-statuses.html">Azathioprine Conflicting Statuses</a></td><td><a href="http://hl7.org/fhir/2016Sep//plandefinition.html">Plan Definition</a></td><td>Detects conflicting statuses for Azathioprine Sensitivity tests and notifies appropriately</td></tr>
-		  <tr><td><a href="plandefinition-azathioprine-lower-dosage.html">Azathioprine Lower Dosage</a></td><td><a href="http://hl7.org/fhir/2016Sep//plandefinition.html">Plan Definition</a></td><td>Detects that a lower dosage of Azathioprine may be appropriate</td></tr>
-		  <tr><td><a href="plandefinition-azathioprine-need-test.html">Azathioprine Test Recommended</a></td><td><a href="http://hl7.org/fhir/2016Sep//plandefinition.html">Plan Definition</a></td><td>Detects no results for Azathioprine Sensitivity and notifies appropriately</td></tr>
-		  <tr><td><a href="plandefinition-azathioprine-poor-status.html">Azathioprine Poor Status</a></td><td><a href="http://hl7.org/fhir/2016Sep//plandefinition.html">Plan Definition</a></td><td>Detects potentially poor metabolism for Azathioprine and notifies appropriately</td></tr>
-		  <tr><td><a href="library-abacavir-hypersensitivity-cds-logic.html">Abacavir Hypersensitivity Library</a></td><td><a href="http://hl7.org/fhir/2016Sep//library.html">Library</a></td><td>The distributable library for Abacavir Sensitivity logic used by the Abacavir Sensitivity decision support rules.</td></tr>
-		  <tr><td><a href="library-azathioprine-myelotoxicity-cds-logic.html">Abacavir Myelotoxicity Library</a></td><td><a href="http://hl7.org/fhir/2016Sep//library.html">Library</a></td><td>The distributable library for Azathioprine Myelotoxicity logic used by the Azathioprine Myelotoxicity decision support rules.</td></tr>
+		  <tr><td><a href="PlanDefinition-abacavir-conflicting-statuses.html">Abacavir Conflicting Statuses</a></td><td><a href="http://hl7.org/fhir/2016Sep/plandefinition.html">Plan Definition</a></td><td>Detects conflicting statuses for Abacavir Sensitivity tests and notifies appropriately</td></tr>
+		  <tr><td><a href="PlanDefinition-abacavir-hypersensitivity-positive.html">Abacavir Hypersensitivity</a></td><td><a href="http://hl7.org/fhir/2016Sep/plandefinition.html">Plan Definition</a></td><td>Detects positive status for Abacavir Sensitivity and notifies appropriately</td></tr>
+		  <tr><td><a href="PlanDefinition-abacavir-need-test.html">Abacavir Sensitivity Test Recommended</a></td><td><a href="http://hl7.org/fhir/2016Sep/plandefinition.html">Plan Definition</a></td><td>Detects no results for Abacavir Sensitivity and notifies appropriately</td></tr>
+		  <tr><td><a href="PlanDefinition-azathioprine-conflicting-statuses.html">Azathioprine Conflicting Statuses</a></td><td><a href="http://hl7.org/fhir/2016Sep/plandefinition.html">Plan Definition</a></td><td>Detects conflicting statuses for Azathioprine Sensitivity tests and notifies appropriately</td></tr>
+		  <tr><td><a href="PlanDefinition-azathioprine-lower-dosage.html">Azathioprine Lower Dosage</a></td><td><a href="http://hl7.org/fhir/2016Sep/plandefinition.html">Plan Definition</a></td><td>Detects that a lower dosage of Azathioprine may be appropriate</td></tr>
+		  <tr><td><a href="PlanDefinition-azathioprine-need-test.html">Azathioprine Test Recommended</a></td><td><a href="http://hl7.org/fhir/2016Sep/plandefinition.html">Plan Definition</a></td><td>Detects no results for Azathioprine Sensitivity and notifies appropriately</td></tr>
+		  <tr><td><a href="PlanDefinition-azathioprine-poor-status.html">Azathioprine Poor Status</a></td><td><a href="http://hl7.org/fhir/2016Sep/plandefinition.html">Plan Definition</a></td><td>Detects potentially poor metabolism for Azathioprine and notifies appropriately</td></tr>
+		  <tr><td><a href="Library-abacavir-hypersensitivity-cds-logic.html">Abacavir Hypersensitivity Library</a></td><td><a href="http://hl7.org/fhir/2016Sep/library.html">Library</a></td><td>The distributable library for Abacavir Sensitivity logic used by the Abacavir Sensitivity decision support rules.</td></tr>
+		  <tr><td><a href="Library-azathioprine-myelotoxicity-cds-logic.html">Abacavir Myelotoxicity Library</a></td><td><a href="http://hl7.org/fhir/2016Sep/library.html">Library</a></td><td>The distributable library for Azathioprine Myelotoxicity logic used by the Azathioprine Myelotoxicity decision support rules.</td></tr>
 		  <tr><td><a href="AbacavirOrderingPharmacogenomicSupport.cql">Abacavir Sensitivity CQL</a></td><td>CQL Source</td><td>For reference, the complete CQL content of the Abacavir Hypersensitivity Library</td></tr>
 		  <tr><td><a href="AzathioprineOrderingPharmacogenomicSupport.cql">Azathioprine Myelotoxicity CQL</a></td><td>CQL Source</td><td>For reference, the complete CQL content of the Azathioprine Myelotoxicity Library</td></tr>
 	  </tbody>
@@ -668,7 +667,7 @@
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-        &copy; DIGITizE 2011+. Pharmacogenomic Ordering Support (v1.5.0-9257) generated on Wed, Sep 7, 2016 11:22-0600. <a href="qa.html">QA Page</a>
+        &copy; DIGITizE 2011+. Pharmacogenomic Ordering Support (v1.5.0-9257) generated on Wed, Sep 7, 2016 20:25-0600. <a href="qa.html">QA Page</a>
         <br/>
         <span style="color: #FFFF77">
         Links: <a style="color: #81BEF7" href="http://hl7.org/fhir/search.cfm">Search <img style="text-align: baseline" src="external.png"/></a> |
